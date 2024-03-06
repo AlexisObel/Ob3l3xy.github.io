@@ -41,7 +41,7 @@ If you scroll a bit further down, you will notice some commented code that expos
 
 HTML Injection happens when you input data into the input fields of a particular website and its displayed back to you on the page.
 
-**Q:What text would be displayed on the page if we use the following payload as our input: <a href="http://www.hackthebox.com">Click Me</a>** Your name is Click Me
+**Q:What text would be displayed on the page if we use the following payload as our input: <a href="https://www.hackthebox.com">Click Me</a>** Your name is Click Me
 
 Enter the provided ip address in the search bar. A web page will display a button which when clicked will display a modal containing a name input field as shown below:
 
@@ -55,7 +55,7 @@ The payload in this particular context is just an anchor element containing a li
 
 ![Alt Text](/assets/img/click.JPG)
 
-Upon cliking the link, you will be directed to http://www.hackthebox.com
+Upon cliking the link, you will be directed to https://www.hackthebox.com
 
 ![Alt Text](/assets/img/click2.JPG)
 
