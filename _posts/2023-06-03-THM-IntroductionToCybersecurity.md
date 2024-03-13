@@ -5,7 +5,7 @@ categories: THM
 tags: [Web Apps, Web App Security, Web fundamentals]
 ---
 
-The certification offered by try hack me gives a proper introduction to cyber security by explaining the fundamentals which include an introduction to other fundamental topics such as offensive security, and defensive security. Knowledge about this will lay a strong foundation for tackling more advanced topics in cybersecurity as well as provide insights on some careers in the field.
+The certification offered by Try Hack Me gives a proper introduction to cyber security by explaining the fundamentals which include an introduction to other fundamental topics such as offensive security, and defensive security. Knowledge about this will lay a strong foundation for tackling more advanced topics in cybersecurity as well as provide insights on some careers in the field.
 
 # Introduction to Cybersecurity
 
@@ -23,8 +23,15 @@ Upon starting the machine there is a fake bank application that loads on the scr
 
 To find hidden pages on the website using gobuster, type the following command in your terminal:
 
-````bash
+```bash
 gobuster -u http://fakebank.com -w wordlist.txt dir
-````
+```
 
+`gobuster` – command line security application
+`-u` – for stating the url of the website to be scanned
+`-w` – for stating the wordlists to go through to find hidden pages
+`dir` – for setting the scan to directory mode where files and directories are looked for
 
+![Alt Text](/assets/img/go.JPG)
+
+<img src="/assets/img/go.JPG" alt="Alt Text" width="100%">
