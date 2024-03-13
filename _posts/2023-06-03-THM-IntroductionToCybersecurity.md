@@ -1,7 +1,7 @@
 ---
 title: THM Introduction To Cybersecurity
 date: 2023-06-03 01:59:00 +3
-categories: HTB
+categories: THM
 tags: [Web Apps, Web App Security, Web fundamentals]
 ---
 
@@ -24,8 +24,7 @@ Upon starting the machine there is a fake bank application that loads on the scr
 To find hidden pages on the website using gobuster, type the following command in your terminal:
 
 ````bash
-```
+
 gobuster -u http://fakebank.com -w wordlist.txt dir
 
-```
 ````
