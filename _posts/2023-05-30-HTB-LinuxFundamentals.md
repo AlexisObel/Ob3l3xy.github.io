@@ -22,10 +22,7 @@ system's processor or type
 
 > **Q: What is the path to htb-student's home directory?** /home/htb-student
 
-The pwd command is a shell command that stands for "print working directory".
-When you run the pwd command in a terminal or command prompt, it prints
-the full path of the current working directory, which is the directory that you are
-currently in. That’s how I was able to find the path.
+The pwd command is a shell command that stands for "print working directory". When you run the pwd command in a terminal or command prompt, it prints the full path of the current working directory, which is the directory that you are currently in. That’s how I was able to find the path.
 
 ![Alt Text](/assets/img/pwd2.JPG)
 
