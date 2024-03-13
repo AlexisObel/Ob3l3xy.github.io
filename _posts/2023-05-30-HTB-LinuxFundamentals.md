@@ -195,7 +195,7 @@ To find the file location of xxd “which” is used before xxd.
 
 __Q: How many files exist on the system that have the ".log" file extension?__ 32
 
-The complete command specifies that a file is being looked for, with a name extension of .log. `2>/dev/null` redirects any errors to the nullcdevice. | is used to filter results `wc -l` does a word of all the lines listed in the output.
+The complete command specifies that a file is being looked for, with a name extension of .log. `2>/dev/null` redirects any errors to the nullcdevice. `|` is used to filter results `wc -l` does a word of all the lines listed in the output.
 
 ````bash 
 find /type f -name *.log 2>/dev/null | wc -l 
