@@ -1,6 +1,6 @@
 ---
 title: THM Passive Reconnaissance
-date: 2023-06-8 02:49:00 +3
+date: 2023-06-08 02:49:00 +3
 categories: THM
 tags: [Reconnaissance] # TAG names should always be lowercase
 ---
@@ -81,8 +81,6 @@ Dig can be used to find the IP address and also specify the type of DNS records 
 #### Q: Check the TXT records of thmlabs.com. What is the flag there?
 
 The “dig” command is short for “domain information groper” and is used to perform DNS lookups to obtain information about DNS zones, domain names, and IP addresses. The “thmlabs.com” is the domain name being queried. The “TXT” argument specifies the type of DNS record being requested. In this case, it is requesting the TXT record, which is a type of DNS record that allows domain owners to associate arbitrary text with a domain name.
-
-![Example Image](/assets/img/avatar.jpg)
 
 ## DNS dumpster
 

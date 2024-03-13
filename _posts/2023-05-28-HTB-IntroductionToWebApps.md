@@ -2,7 +2,7 @@
 title: HTB Introduction To Web Applications
 date: 2023-05-28 07:27:00 +3
 categories: HTB
-tags: [Web Apps] 
+tags: [Web Apps, Web App Security, Web fundamentals] 
 ---
 
 In order to be able to secure web applications, an understanding of how web applications work, their architecture and vulnerabilites is important to be able to secure them effectively. In this post, I will demonstrate how I went about the labs in this module of HTB Academy.

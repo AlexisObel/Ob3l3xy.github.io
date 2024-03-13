@@ -2,7 +2,7 @@
 title: HTB Linux Fundamentals
 date: 2023-05-30 07:27:00 +3
 categories: HTB
-tags: [Linux] 
+tags: [Linux fundamentals, Cybersecurity, Linux security]
 ---
 
 Understanding operating systems is crucial for cybersecurity. Before hackers make use of tools, they install and deploy attacking software like ransomware using the operating system. Hackers also attack people's operating systems to try and have acces to sensitive information, the network itself and even stop people from having access to their systems which can hinder productivity and business contnuity. As a cybersecurity professional, understanding the operating systems can help when identifying vulnerabilities, attacks when they are happening or when they have happened and ways in which we can make use of the operating system alongside other tools to secure other operating systems and networks from cyber attacks.
