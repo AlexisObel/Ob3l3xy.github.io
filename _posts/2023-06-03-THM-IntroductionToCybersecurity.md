@@ -58,8 +58,11 @@ Defensive security is about preventing intrusions from occurring and when they o
 **Q: Which team focuses on defensive security?** Blue team
 
 Defensive security is in many areas which include:
+
 **Security operation center (SOC)** – check for malicious activities by looking at vulnerabilities, policy violations, unauthorized activities, and network intrusions.
+
 **Threat intelligence** – gathering information about enemies who in this case are potential threats to the organizations systems and networks to safeguard.
+
 **Digital forensics and incidence response** – Gathering evidence through investigation of crimes and establishing facts is digital forensics while incidence response is about preventing further damage to the system when the incident occurs as well as preventing the same incident from occurring again. This is done through:
 
 - **Preparation** – preventing incidences from occurring
