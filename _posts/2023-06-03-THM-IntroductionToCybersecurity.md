@@ -92,7 +92,8 @@ As a Junior (Associate) Security Analyst, I am to inform the head of the SOC dep
 
 ![Alt Text](/assets/img/alrt3.JPG)
 
-Through successfully blocking the IP address I also obtained a HTB flag **THM{THREAT-BLOCKED}**
+>Through successfully blocking the IP address I also obtained a HTB flag **THM{THREAT-BLOCKED}**
+{: .prompt-tip }
 
 ### Introduction to Offensive Security
 
