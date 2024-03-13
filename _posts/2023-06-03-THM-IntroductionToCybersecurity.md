@@ -24,7 +24,7 @@ Upon starting the machine there is a fake bank application that loads on the scr
 To find hidden pages on the website using gobuster, type the following command in your terminal:
 
 ````bash
-
 gobuster -u http://fakebank.com -w wordlist.txt dir
-
 ````
+
+

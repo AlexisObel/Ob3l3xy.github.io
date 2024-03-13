@@ -40,9 +40,9 @@ Whois can give us information on:
 
 A whois command was done for tryhackme.com as shown below:
 
-```bash
+````bash
 whois tryhackme.com
-```
+````
 
 It displays the name of the server used by tryhackme, updated and creation date of the domain name and other details tied to the domain tryhackme.com. The questions below also show more information that was found to do with tryhackme.com
 
@@ -58,15 +58,15 @@ nslookup — name server lookup
 
 It can be used to find the domain name of an IP address:
 
-```bash
+````bash
 nslookup domain_name
-```
+````
 
 The command can be customized to find specifically IPv4 address with the option A or IPv6 address with the option AAAA:
 
-```bash
+````bash
 nslookup option domain_name server
-```
+````
 
 Other options include CNAME — Canonical Name, MX — Mail Servers, SOA — Start of Authority, TXT — txt records
 
