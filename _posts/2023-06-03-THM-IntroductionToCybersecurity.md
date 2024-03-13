@@ -11,7 +11,7 @@ The learning path offered by Try Hack Me gives a proper introduction to cyber se
 
 Offensive security is breaking into systems by taking advantage of software bugs and other system vulnerabilities just the way a hacker would do. This will help in improving the security of a system once the weaknesses have been identified through offensive security. Defensive security on the other hand prevents hackers from breaking into systems by closely monitoring threats and malicious activity.
 
-**Q: Which of the following options better represents the process where you simulate a hacker's actions to find vulnerabilities in a system?** Offensive security
+> **Q: Which of the following options better represents the process where you simulate a hacker's actions to find vulnerabilities in a system?** Offensive security
 
 ### Hacking your first machine
 
@@ -55,7 +55,7 @@ To confirm that the transaction was successful, I had to go back to the account 
 
 Defensive security is about preventing intrusions from occurring and when they occur, detecting them and taking the necessary measures to deal with them.
 
-**Q: Which team focuses on defensive security?** Blue team
+> **Q: Which team focuses on defensive security?** Blue team
 
 Defensive security is in many areas which include:
 
@@ -70,11 +70,11 @@ Defensive security is in many areas which include:
 - **Containment, eradication, and recovery** – preventing it from spreading,getting rid of it and bringing back the system to normal functionality
 - **Post-incidence activity** – Learn from incident and prevent it from happening again.
 
-**Q: What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?** Security Operations Center
+> **Q: What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?** Security Operations Center
 
-**Q: What does DFIR stand for?** Digital Forensics and Incident Response
+> **Q: What does DFIR stand for?** Digital Forensics and Incident Response
 
-**Q: Which kind of malware requires the user to pay money to regain access to their files?** Ransomware
+> **Q: Which kind of malware requires the user to pay money to regain access to their files?** Ransomware
 
 ### Practical example of Defensive Security
 
@@ -92,9 +92,7 @@ As a Junior (Associate) Security Analyst, I am to inform the head of the SOC dep
 
 ![Alt Text](/assets/img/alrt3.JPG)
 
-Through successfully blocking the IP address I also obtained a HTB flag below
-
-> THM{THREAT-BLOCKED} {: .prompt-tip }
+Through successfully blocking the IP address I also obtained a HTB flag **THM{THREAT-BLOCKED}**
 
 ### Introduction to Offensive Security
 
@@ -103,7 +101,7 @@ page, then in case the user searches for something, this request is sent to the 
 
 Bug bounty program – when companies offer rewards to people that find system vulnerabilities in their systems.
 
-**Q: What do you need to access the web application?** Browser
+> **Q: What do you need to access the web application?** Browser
 
 ### Web Application Security Risks
 
@@ -115,9 +113,9 @@ Bug bounty program – when companies offer rewards to people that find system v
 
 **Cryptographic failures: Encryption:** clear text to cyphertext, Decryptioncyphertext to clear text. Weak algorithms are an example of cryptographic failure.
 
-**Q: You discovered that the login page allows an unlimited number of login attempts without trying to slow down the user or lock the account. What is the category of this security risk** Identification and Authentication Failure
+> **Q: You discovered that the login page allows an unlimited number of login attempts without trying to slow down the user or lock the account. What is the category of this security risk** Identification and Authentication Failure
 
-**Q: You noticed that the username and password are sent in cleartext without encryption. What is the category of this security risk?**Cryptographic Failures
+> **Q: You noticed that the username and password are sent in cleartext without encryption. What is the category of this security risk?**Cryptographic Failures
 
 #### Practical example of web application security
 
@@ -143,7 +141,7 @@ Digital forensics – application of computer science to acquire evidence for a 
 Investigations are done in the public and private sector.
 Evidence is gathered from electronic devices and software.
 
-**Q: Consider the desk in the photo above. In addition to the smartphone, camera, and SD cards, what would be interesting for digital forensics?** Laptop
+> **Q: Consider the desk in the photo above. In addition to the smartphone, camera, and SD cards, what would be interesting for digital forensics?** Laptop
 
 Digital forensics process:
 
@@ -154,7 +152,7 @@ Digital forensics process:
 - Return the digital evidence to the secure container: You will be working on the copy. If you damage the copy, you can always create a new one.
 - Start processing the copy on your forensics workstation.
 
-**Q: It is essential to keep track of who is handling it at any point in time to ensure that evidence is admissible in the court of law. What is the name of the documentation that would help establish that?** Chain of Custody
+> **Q: It is essential to keep track of who is handling it at any point in time to ensure that evidence is admissible in the court of law. What is the name of the documentation that would help establish that?** Chain of Custody
 
 #### Practical example of Digital Forensics
 

@@ -11,17 +11,17 @@ In order to be able to secure web applications, an understanding of how web appl
 
 ### HTML
 
-**Q: What is the HTML tag used to show an image?** `<img>`
+> **Q: What is the HTML tag used to show an image?** `<img>`
 
 ### Cascading Style Sheets (CSS)
 
-**Q: What is the CSS "property: value" used to make an HTML element's text aligned to the left?** `text-align: left;`
+> **Q: What is the CSS "property: value" used to make an HTML element's text aligned to the left?** `text-align: left;`
 
 ## Front End Vulnerabilities
 
 ### Sensitive Data Exposure
 
-**Q: Check the above login form for exposed passwords. Submit the password as the answer.**
+> **Q: Check the above login form for exposed passwords. Submit the password as the answer.**
 HiddenInPlainSight
 
 Start by copy pasting the spawn machine’s ip address to the webpage search bar. A login page will appear.
@@ -41,7 +41,7 @@ If you scroll a bit further down, you will notice some commented code that expos
 
 HTML Injection happens when you input data into the input fields of a particular website and its displayed back to you on the page.
 
-**Q:What text would be displayed on the page if we use the following payload as our input: <a href="https://www.hackthebox.com">Click Me</a>** Your name is Click Me
+> **Q:What text would be displayed on the page if we use the following payload as our input: <a href="https://www.hackthebox.com">Click Me</a>** Your name is Click Me
 
 Enter the provided ip address in the search bar. A web page will display a button which when clicked will display a modal containing a name input field as shown below:
 
@@ -61,7 +61,7 @@ Upon cliking the link, you will be directed to https://www.hackthebox.com
 
 ### Cross-Site Scripting (XSS)
 
-**Q: Try to use XSS to get the cookie value in the above page**
+> **Q: Try to use XSS to get the cookie value in the above page**
 XSSisFun
 
 Inject the following DOM XSS JavaScript code as a payload, which should show us the cookie value for the current user:
@@ -78,26 +78,26 @@ An alert window pops up with the cookie value in it:
 
 ### Back End Servers
 
-**Q: What operating system is 'WAMP' used with?**
+> **Q: What operating system is 'WAMP' used with?**
 Windows
 
 WAMP is a type of combination for back end servers. It consists of Windows, Apache, MySQL, and PHP.
 
 ### Web Servers
 
-**Q: If a web server returns an HTTP code 201, what does it stand for?** created
+> **Q: If a web server returns an HTTP code 201, what does it stand for?** created
 
 HTTP codes are number responses from the web server and each number combination means something. 201 meaning created, 404 meaning not found and so on.
 
 ### Databases
 
-**Q: What type of database is Google's Firebase Database?** NoSQL
+> **Q: What type of database is Google's Firebase Database?** NoSQL
 
 Databases store web application information. NoSQL falls under the category on non-relational databses meaning that it lacks the structure of tables consisting of rows and columns.
 
 ### Development Frameworks & APIs
 
-**Q: Use GET request '/index.php?id=0' to search for the name of the user with id number 1?** superadmin
+> **Q: Use GET request '/index.php?id=0' to search for the name of the user with id number 1?** superadmin
 
 Copy paste the get request to the end of the url containing the machine's IP address. At first an error will appear stating that the user with id 0 doesn't exist.
 
@@ -111,7 +111,7 @@ Change the id to 1 as directed by the question. The page displays the user **sup
 
 ### Common Web Vulnerabilities
 
-__Q: To which of the above categories does public vulnerability 'CVE-2014-6271' belongs to?__ Command Injection
+> __Q: To which of the above categories does public vulnerability 'CVE-2014-6271' belongs to?__ Command Injection
 
 The CVE (Common Vulnerabilities and Exposures) database by MITRE corporation https://cve.mitre.org/, contains information about hardware and software vulnerabilities and each vulnerability has a unique identifier. To figure our the category of the given vulnerability search for it in the CVE database. 
 
@@ -120,7 +120,7 @@ The CVE (Common Vulnerabilities and Exposures) database by MITRE corporation htt
 ![Alt Text](/assets/img/cve2.JPG)
 
 ### Public Vulnerabilities 
-__Q:  What is the CVSS score of the public vulnerability CVE-2017-0144?__ 9.3
+> __Q:  What is the CVSS score of the public vulnerability CVE-2017-0144?__ 9.3
 
 The CVSS (Common Vulnerability Scoring System), is an open-source industry standard for assessing the severity of security vulnerabilities. Use version 2 https://nvd.nist.gov/vuln-metrics/cvss/v2-calculator to calculate the level of severity of CVE-2017-0144. 
 

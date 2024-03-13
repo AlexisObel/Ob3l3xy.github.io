@@ -9,7 +9,7 @@ Understanding operating systems is crucial for cybersecurity. Before hackers mak
 
 ### The Shell
 
-**Q: Find out the machine hardware name and submit it as the answer** x86_64
+> **Q: Find out the machine hardware name and submit it as the answer** x86_64
 
 The `uname -m` command is used to display the machine hardware name or
 architecture of the computer system. It is a shell command available on Unix-like
@@ -20,7 +20,7 @@ system's processor or type
 
 ![Alt Text](/assets/img/uname.JPG)
 
-**Q: What is the path to htb-student's home directory?** /home/htb-student
+> **Q: What is the path to htb-student's home directory?** /home/htb-student
 
 The pwd command is a shell command that stands for "print working directory".
 When you run the pwd command in a terminal or command prompt, it prints
@@ -29,7 +29,7 @@ currently in. That’s how I was able to find the path.
 
 ![Alt Text](/assets/img/pwd2.JPG)
 
-**Q: What is the path to the htb-student's mail?** /var/mail/htb-student
+> **Q: What is the path to the htb-student's mail?** /var/mail/htb-student
 
 The **/var/mail/** directory is a system directory that contains user mailboxes for
 local mail delivery. When a user on the local system receives mail, it is typically
@@ -37,7 +37,7 @@ stored in a mailbox file within the /var/mail/ directory with the same name as t
 user's login name. Hence why it was easy to find htb-student’s mail, because it’s
 the default place to find it.
 
-**Q: Which shell is specified for the htb-student user?** /bin/bash
+> **Q: Which shell is specified for the htb-student user?** /bin/bash
 
 The `echo $SHELL` command is used to display the default shell that is currently
 being used in the terminal or command prompt. The $SHELL variable is an
@@ -50,7 +50,7 @@ terminal or command prompt.
 
 ![Alt Text](/assets/img/echo.JPG)
 
-**Q: Which kernel version is installed on the system? (Format: 1.22.3)** 4.15.0
+> **Q: Which kernel version is installed on the system? (Format: 1.22.3)** 4.15.0
 
 The `uname -r` command is a shell command used to display the kernel release of
 the operating system. The uname command is typically available on Unix-like
@@ -62,7 +62,7 @@ the currently running kernel.
 
 ![Alt Text](/assets/img/uR.JPG)
 
-**Q: What is the name of the network interface that MTU is set to 1500?** ens192
+> **Q: What is the name of the network interface that MTU is set to 1500?** ens192
 
 The `ifconfig` command is a shell command used to display information about
 network interfaces on a Unix-like operating system. The -a option specifies that
@@ -77,7 +77,7 @@ each network interface.
 
 ### Navigation
 
-**Q: What is the name of the hidden "history" file in the htb-user's home directory?** .bash_history
+> **Q: What is the name of the hidden "history" file in the htb-user's home directory?** .bash_history
 
 The `ls -la` command is a command used in Unix-based operating systems (such as
 Linux and macOS) to list the files and directories in the current directory,
@@ -89,7 +89,7 @@ are hidden by default).
 
 ![Alt Text](/assets/img/ls2.JPG)
 
-**Q: What is the index number of the "sudoers" file in the "/etc" directory?**
+> **Q: What is the index number of the "sudoers" file in the "/etc" directory?**
 147627
 
 I first got into the /etc folder using the `cd /etc` command. I listed all the files
@@ -104,7 +104,7 @@ file as shown below:
 
 ### Working with Files and Directories
 
-**Q: What is the name of the last modified file in the "/var/backups" directory?**
+> **Q: What is the name of the last modified file in the "/var/backups" directory?**
 apt.extended_states.0
 
 The `ls -lt` command is a command used in Unix-based operating systems to list
@@ -120,7 +120,7 @@ in a directory.
 
 ![Alt Text](/assets/img/lslt.JPG)
 
-**Q: What is the inode number of the "shadow.bak" file in the "/var/backups" directory?**
+> **Q: What is the inode number of the "shadow.bak" file in the "/var/backups" directory?**
 265293
 
 The `ls -i` command is used in Unix-based operating systems to display the inode
@@ -135,7 +135,7 @@ file shadow.bak.
 
 ### Find files and directories
 
-__Q: What is the name of the last modified file in the "/var/backups" directory?__
+> __Q: What is the name of the last modified file in the "/var/backups" directory?__
 apt.extended_states.0
 
 Searching files in the entire file system that meet the following criteria:
@@ -159,11 +159,10 @@ find /-type f -name *.conf -user root -size +25k -newermt 2020-03-03 ls -al {} \
 
 ![Alt Text](/assets/img/lsall.JPG)
 
-__Q: What is the inode number of the "shadow.bak" file in the "/var/backups" directory?__
+> __Q: What is the inode number of the "shadow.bak" file in the "/var/backups" directory?__
 265293
 
-__Q: What is the name of the config file that has been created after 2020-03-03 and is
-smaller than 28k but larger than 25k?__ 00-mesa-defaults.conf
+> __Q: What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?__ 00-mesa-defaults.conf
 
 Searching for files with the __".bak"__ extension in the entire file system and
 displaying detailed information about them. It is useful for finding backup files
@@ -184,7 +183,7 @@ find / -type f -name *.bak -exec ls -al {} \; 2>/dev/null
 
 ![Alt Text](/assets/img/lsall2.JPG)
 
-__Q: Submit the full path of the "xxd" binary.__ /usr/bin/xxd
+> __Q: Submit the full path of the "xxd" binary.__ /usr/bin/xxd
 
 The `which xxd` command is used to create a hex dump of a given file or standard input.
 To find the file location of xxd “which” is used before xxd.
@@ -193,7 +192,7 @@ To find the file location of xxd “which” is used before xxd.
 
 ### File descriptors and redirections
 
-__Q: How many files exist on the system that have the ".log" file extension?__ 32
+> __Q: How many files exist on the system that have the ".log" file extension?__ 32
 
 The complete command specifies that a file is being looked for, with a name extension of .log. `2>/dev/null` redirects any errors to the nullcdevice. `|` is used to filter results `wc -l` does a word of all the lines listed in the output.
 
@@ -203,7 +202,7 @@ find /type f -name *.log 2>/dev/null | wc -l
 
 ![Alt Text](/assets/img/log.JPG)
 
-__Q: How many total packages are installed on the target system?__ 737
+> __Q: How many total packages are installed on the target system?__ 737
 
 After running the `dpkg --list` command, a list of all installed packages appeared,
 along with their version numbers, descriptions, and other information. The
@@ -219,8 +218,7 @@ packages on your system.
 
 ### Filter contents
 
-__Q: How many services are listening on the target system on all interfaces? (Not on
-localhost and IPv4 only)__ 7
+> __Q: How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)__ 7
 
 When executed, -l will display a list of all the open network connections on the
 system, along with the associated protocol, local and remote IP addresses, and
@@ -233,8 +231,7 @@ network activity.
 
 ![Alt Text](/assets/img/netstat.JPG)
 
-__Q: Determine what user the ProFTPd server is running under. Submit the username as
-the answer.__ Proftpd
+> __Q: Determine what user the ProFTPd server is running under. Submit the username as the answer.__ Proftpd
 
 `ps` is being used to display information about the running processes on a system.
 When executed without any options or arguments, the ps command shows a list
@@ -244,15 +241,11 @@ of the processes associated with the current terminal session.
 
 ![Alt Text](/assets/img/ps2.JPG)
 
-__Q: Use cURL from your Pwnbox (not the target machine) to obtain the source code of
-the "https://www.inlanefreight.com" website and filter all unique paths of that domain.
-Submit the number of these paths as the answer.__ 34
+> __Q: Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths of that domain. Submit the number of these paths as the answer.__ 34
 
 ### Service and Process Management
 
-__Q: Use the "systemctl" command to list all units of services and submit the unit name
-with the description "Load AppArmor profiles managed internally by snapd" as the
-answer.__  snapd.apparmor.service
+> __Q: Use the "systemctl" command to list all units of services and submit the unit name with the description "Load AppArmor profiles managed internally by snapd" as the answer.__  snapd.apparmor.service
 
 The `systemctl list-unit-files` command lists the unit files that systemd knows
 about, and the `grep -i "AppArmor"` part of the command filters the output to
@@ -273,7 +266,7 @@ the system.
 
 ### Task Scheduling
 
-__Q: What is the type of the service of the "syslog.service"?__ notify
+> __Q: What is the type of the service of the "syslog.service"?__ notify
 
 The systemctl show command with the -p option is used to show specific
 properties of a systemd unit. In this case, the command `systemctl show
