@@ -15,15 +15,15 @@ Active reconnaissance involves direct interaction with a target system or networ
 
 Passive reconnaissance involves gathering information about a target system or network without direct interaction. Some examples of passive reconnaissance include looking at job adverts that expose software competency requirements and conducting advanced Google searches.
 
-#### Q: You visit the Facebook page of the target company, hoping to get some of their employee names. What kind of reconnaissance activity is this? (A for active, P for passive) P
+**Q: You visit the Facebook page of the target company, hoping to get some of their employee names. What kind of reconnaissance activity is this? (A for active, P for passive)** P
 
 When you visit the Facebook page you are not directly engaging with the company’s system or network, instead, you are just viewing information that was made public by the organization.
 
-#### Q: You ping the IP address of the company webserver to check if ICMP traffic is blocked. What kind of reconnaissance activity is this? (A for active, P for passive) A
+**Q: You ping the IP address of the company webserver to check if ICMP traffic is blocked. What kind of reconnaissance activity is this? (A for active, P for passive)** A
 
 Just by directly involving the IP address of the organization, it is evident that it is active reconnaissance. The IP address is part of the target machine that is within the organizations network.
 
-#### Q: You happen to meet the IT administrator of the target company at a party. You try to use social engineering to get more information about their systems and network infrastructure. What kind of reconnaissance activity is this? (A for active, P for passive) A
+**Q: You happen to meet the IT administrator of the target company at a party. You try to use social engineering to get more information about their systems and network infrastructure. What kind of reconnaissance activity is this? (A for active, P for passive)** A
 
 Active because there is direct engagement with the members of the organization. They are aware that you are gathering information about their systems and network infrastructure. The whole point of passive recon is that no one is aware at all. Social engineering may not be known when it is happening, but they eventually realize it later on.
 
@@ -46,11 +46,11 @@ whois tryhackme.com
 
 It displays the name of the server used by tryhackme, updated and creation date of the domain name and other details tied to the domain tryhackme.com. The questions below also show more information that was found to do with tryhackme.com
 
-#### Q: When was TryHackMe.com registered? 20180705
+**Q: When was TryHackMe.com registered?** 20180705
 
-#### Q: What is the registrar of TryHackMe.com? namecheap.com
+**Q: What is the registrar of TryHackMe.com?** namecheap.com
 
-#### Q: Which company is TryHackMe.com using for name servers?cloudflare.com
+**Q: Which company is TryHackMe.com using for name servers?**cloudflare.com
 
 ## nslookup and dig
 
@@ -78,7 +78,7 @@ dig — Domain Information Gropper is a more advance domain query tool compared 
 
 Dig can be used to find the IP address and also specify the type of DNS records that we are looking for.
 
-#### Q: Check the TXT records of thmlabs.com. What is the flag there?
+**Q: Check the TXT records of thmlabs.com. What is the flag there?**
 
 The “dig” command is short for “domain information groper” and is used to perform DNS lookups to obtain information about DNS zones, domain names, and IP addresses. The “thmlabs.com” is the domain name being queried. The “TXT” argument specifies the type of DNS record being requested. In this case, it is requesting the TXT record, which is a type of DNS record that allows domain owners to associate arbitrary text with a domain name.
 
@@ -86,16 +86,16 @@ The “dig” command is short for “domain information groper” and is used t
 
 It’s a free online search tool that enable’s one to get more detailed information about a Domain name that a simple dig or nslookup command cannot find. This information is displayed in a readable format.
 
-#### Q: Lookup tryhackme.com on DNS dumpster. What is one interesting subdomain that you would discover in addition to www and blog? Remote
+**Q: Lookup tryhackme.com on DNS dumpster. What is one interesting subdomain that you would discover in addition to www and blog?** Remote
 
 ## Shodan.io
 
 Through shodan you can learn a lot about a client’s network without connecting to it directly. You can also keep track of devices that have been exposed within an organization’s network.
 
-#### Q: According to Shodan.io, what is the 2nd country in the world in terms of the number of publicly accessible Apache servers? Germany
+**Q: According to Shodan.io, what is the 2nd country in the world in terms of the number of publicly accessible Apache servers?** Germany
 
-#### Q: Based on Shodan.io, what is the 3rd most common port used for Apache? 8080
+**Q: Based on Shodan.io, what is the 3rd most common port used for Apache?** 8080
 
-#### Q: Based on Shodan.io, what is the 3rd most common port used for nginx? 888
+**Q: Based on Shodan.io, what is the 3rd most common port used for nginx?** 888
 
 In conclusion, we now understand how passive recon works and the tools that are used to carry it out. Onto the next! &#x1F60A;
