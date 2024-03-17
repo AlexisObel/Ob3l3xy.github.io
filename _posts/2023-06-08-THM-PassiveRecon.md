@@ -98,4 +98,4 @@ Through shodan you can learn a lot about a client’s network without connecting
 
 > **Q: Based on Shodan.io, what is the 3rd most common port used for nginx?** 888
 
-In conclusion, we now understand how passive recon works and the tools that are used to carry it out. Onto the next! &#x1F60A;
+That concludes THM Passive Reconnaissance. Onto the next! &#x1F60A;
