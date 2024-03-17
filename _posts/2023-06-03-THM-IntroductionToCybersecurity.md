@@ -19,7 +19,7 @@ Upon starting the machine there is a fake bank application that loads on the scr
 
 ![Alt Text](/assets/img/fbank.JPG)
 
-To find hidden pages on the website using gobuster, type the following command in your terminal:
+To find hidden pages on the website using gobuster, I typed the following command in the terminal:
 
 ```bash
 gobuster -u http://fakebank.com -w wordlist.txt dir
@@ -41,7 +41,7 @@ After obtaining the web directory that can be accessed, I proceeded to navigate 
 
 ![Alt Text](/assets/img/fb2.JPG)
 
-Now that I have access to the page which is the admin portal which means that I have admin privileges, I will send money from the user’s bank account by transferring $2000 from their bank account `(2276)` to mine `(8881)`.
+Since I had access to the page (admin portal) I gained admin privileges, I sent money from the user’s bank account by transferring $2000 from their bank account `(2276)` to mine `(8881)`.
 
 ![Alt Text](/assets/img/min.JPG)
 
@@ -66,7 +66,7 @@ Defensive security is in many areas which include:
 **Digital forensics and incidence response** – Gathering evidence through investigation of crimes and establishing facts is digital forensics while incidence response is about preventing further damage to the system when the incident occurs as well as preventing the same incident from occurring again. This is done through:
 
 - **Preparation** – preventing incidences from occurring
-  \*Detection and analysis – detect and learn about it and how bad it is level wise
+- **Detection and analysis** – detect and learn about it and how bad it is level wise
 - **Containment, eradication, and recovery** – preventing it from spreading,getting rid of it and bringing back the system to normal functionality
 - **Post-incidence activity** – Learn from incident and prevent it from happening again.
 
@@ -84,11 +84,11 @@ Finding the malicious IP address; I managed to identify unauthorized connection 
 
 ![Alt Text](/assets/img/alrt.JPG)
 
-I had to check if this IP address is invalid by searching for it in an IP scanner website. It detected the IP address as malicious:
+I had to check if this IP address was invalid by searching for it in an IP scanner website. It detected the IP address as malicious:
 
 ![Alt Text](/assets/img/alrt2.JPG)
 
-As a Junior (Associate) Security Analyst, I am to inform the head of the SOC department who is the SOC Team Lead about this matter. Next, I got the go ahead to block the malicious IP address in the firewall blocklist which already contains other malicious IP addresses that were blocked earlier.
+As a Junior (Associate) Security Analyst, I was to inform the head of the SOC department who is the SOC Team Lead about this matter. Next, I got the go ahead to block the malicious IP address in the firewall blocklist which already contains other malicious IP addresses that were blocked earlier.
 
 ![Alt Text](/assets/img/alrt3.JPG)
 
@@ -98,8 +98,7 @@ Through successfully blocking the IP address I also obtained a HTB flag
 
 ### Introduction to Offensive Security
 
-A web application is a program running on a remote server and it provides services to its users e.g., Office documentation (Microsoft office 365). Web applications work such that the web application initially loads the landing
-page, then in case the user searches for something, this request is sent to the server in the backend. The server in the backend looks for the requested page in the database and responds by sending it back to the web application where it is displayed.
+A web application is a program running on a remote server and it provides services to its users e.g., Office documentation (Microsoft office 365). Web applications work such that the web application initially loads the landing page, then in case the user searches for something, this request is sent to the server in the backend. The server in the backend looks for the requested page in the database and responds by sending it back to the web application where it is displayed.
 
 Bug bounty program – when companies offer rewards to people that find system vulnerabilities in their systems.
 
@@ -158,9 +157,9 @@ Digital forensics process:
 
 #### Practical example of Digital Forensics
 
-Gado the cat has been kidnapped but the kidnapper sent a letter to the owner. I am to gather evidence and use it to find where the cat is. The kidnapper sent a word document with requests. The word document was converted to PDF format and the image was extracted from the word document.
+Gado the cat had been kidnapped but the kidnapper sent a letter to the owner. I was to gather evidence and use it to find where the cat was. The kidnapper sent a word document with requests. The word document was converted to PDF format and the image was extracted from the word document.
 
-Navigating to the folder containing the files(evidence) gathered for this case using the cd command. ls was used to list the files in that directory:
+I navigated to the folder containing the files(evidence) gathered for this case using the cd command. ls was used to list the files in that directory:
 
 ![Alt Text](/assets/img/df1.JPG)
 
@@ -169,11 +168,11 @@ Navigating to the folder containing the files(evidence) gathered for this case u
  sudo apt install poppler-utils
 ```
 
-Gathering metadata from the pdf file using pdfinfo:
+I gathered metadata from the pdf file using pdfinfo:
 
 ![Alt Text](/assets/img/df2.JPG)
 
-Valuable information that I have obtained so far is the name of the author who most likely is the kidnapper (Ann Gree Shepherd) and the creation date.
+Valuable information that I had obtained so far was the name of the author who most likely was the kidnapper (Ann Gree Shepherd) and the creation date.
 
 ```bash
 # Note: Command for installing exiftool
@@ -212,5 +211,7 @@ The objective was to stop malicious packets from being sent from the source to t
 ![Alt Text](/assets/img/df8.JPG)
 
 That concludes the Introduction to Cybersecurity learning path on THM, onto the next! &#x1F60A;
+
+
 
 
