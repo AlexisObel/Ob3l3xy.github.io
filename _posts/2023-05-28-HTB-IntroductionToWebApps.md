@@ -24,16 +24,15 @@ In order to be able to secure web applications, an understanding of how web appl
 > **Q: Check the above login form for exposed passwords. Submit the password as the answer.**
 HiddenInPlainSight
 
-Start by copy pasting the spawn machine’s ip address to the webpage search bar. A login page will appear.
+I started by copy pasting the spawn machine’s ip address to the webpage search bar. A login page will appeared.
 
 ![Alt Text](/assets/img/WFP.JPG)
 
-Click view page source to have access to the source code of the
-form and it will display as shown below:
+To have access to the source code of the form, I clicked **view page source** and it will display as shown below:
 
 ![Alt Text](/assets/img/WFP2.JPG)
 
-If you scroll a bit further down, you will notice some commented code that exposes credentials that can be used to login where the username is **admin** and the password **HiddenInPlainSight**. If you try to login with the exposed test credentials, nothing will occur:
+When I scrolled a bit further down, I noticed some commented code that exposed credentials that could be used to login where the username is **admin** and the password **HiddenInPlainSight**. When I tried to loginn with the exposed test credentials, nothing occured:
 
 ![Alt Text](/assets/img/comment.JPG)
 
@@ -43,7 +42,7 @@ HTML Injection happens when you input data into the input fields of a particular
 
 > **Q:What text would be displayed on the page if we use the following payload as our input: <a href="https://www.hackthebox.com">Click Me</a>** Your name is Click Me
 
-Enter the provided ip address in the search bar. A web page will display a button which when clicked will display a modal containing a name input field as shown below:
+I entered the provided ip address in the search bar. A web page displayed a button which when clicked displays a modal containing a name input field as shown below:
 
 ![Alt Text](/assets/img/HTMLi.JPG)
 
@@ -51,11 +50,11 @@ Payload is harmful code intended to harm the target machine or network. Copy pas
 
 ![Alt Text](/assets/img/payload.JPG)
 
-The payload in this particular context is just an anchor element containing a link to hack the box official website. Ater submitting the input the page will display "Click me" which is the clickable link to the webiste.
+The payload in this particular context is just an anchor element containing a link to hack the box official website. Ater submitting the input the page displayed "Click me" which was the clickable link to the webiste.
 
 ![Alt Text](/assets/img/click.JPG)
 
-Upon cliking the link, you will be directed to https://www.hackthebox.com
+Upon cliking the link, I was directed to https://www.hackthebox.com
 
 ![Alt Text](/assets/img/click2.JPG)
 
@@ -64,13 +63,13 @@ Upon cliking the link, you will be directed to https://www.hackthebox.com
 > **Q: Try to use XSS to get the cookie value in the above page**
 XSSisFun
 
-Inject the following DOM XSS JavaScript code as a payload, which should show us the cookie value for the current user:
+I injected the following DOM XSS JavaScript code as a payload, which showed the cookie value for the current user:
 
 `#"><img src=/ onerror=alert(document.cookie)>`
 
 ![Alt Text](/assets/img/payload2.JPG)
 
-An alert window pops up with the cookie value in it:
+An alert window poped up with the cookie value in it:
 
 ![Alt Text](/assets/img/payload3.JPG)
 
@@ -99,11 +98,11 @@ Databases store web application information. NoSQL falls under the category on n
 
 > **Q: Use GET request '/index.php?id=0' to search for the name of the user with id number 1?** superadmin
 
-Copy paste the get request to the end of the url containing the machine's IP address. At first an error will appear stating that the user with id 0 doesn't exist.
+I copy pasted the get request to the end of the url containing the machine's IP address. At first an error appeared stating that the user with id 0 didn't exist.
 
 ![Alt Text](/assets/img/get.JPG)
 
-Change the id to 1 as directed by the question. The page displays the user **superadmin**.
+I changed the id to 1 as directed by the question. The page displayed the user **superadmin**.
 
 ![Alt Text](/assets/img/get2.JPG)
 
@@ -113,7 +112,7 @@ Change the id to 1 as directed by the question. The page displays the user **sup
 
 > __Q: To which of the above categories does public vulnerability 'CVE-2014-6271' belongs to?__ Command Injection
 
-The CVE (Common Vulnerabilities and Exposures) database by MITRE corporation https://cve.mitre.org/, contains information about hardware and software vulnerabilities and each vulnerability has a unique identifier. To figure our the category of the given vulnerability search for it in the CVE database. 
+The CVE (Common Vulnerabilities and Exposures) database by MITRE corporation https://cve.mitre.org/, contains information about hardware and software vulnerabilities and each vulnerability has a unique identifier. To figure our the category of the given vulnerability, I searched for it in the CVE database. 
 
 ![Alt Text](/assets/img/cve.JPG)
 
@@ -126,11 +125,11 @@ The CVSS (Common Vulnerability Scoring System), is an open-source industry stand
 
 ![Alt Text](/assets/img/cvss.JPG)
 
-Enter the CVE id for the vulnerability to be measured and search:
+I entered the CVE id for the vulnerability to be measured and search:
 
 ![Alt Text](/assets/img/cvss2.JPG)
 
-The results indicate 9.3 which is high:
+The results indicated 9.3 which was high:
 
 ![Alt Text](/assets/img/cvss3.JPG)
 
