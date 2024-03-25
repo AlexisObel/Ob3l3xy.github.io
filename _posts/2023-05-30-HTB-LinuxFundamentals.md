@@ -17,8 +17,6 @@ The `uname -m` command was used to display the machine hardware name or architec
 uname -m
 ````
 
-![Alt Text](/assets/img/uname.JPG)
-
 > **Q: What is the path to htb-student's home directory?** /home/htb-student
 
 The pwd command is a shell command that stands for "print working directory". When you run the pwd command in a terminal or command prompt, it prints the full path of the current working directory, which is the directory that you are currently in. That’s how I was able to find the path.
