@@ -13,11 +13,11 @@ tags:
   ]
 ---
 
-On 24th Feb I got the previlege to attend the Africa Hackon Masterclass Q1 edition. This session, facilitated by the highly knowledgeable instructor, Micheal Chesang, is just one of the many great sessions that we had and I specifically chose this Room because I was curious and was excited to learn how to exploit API vulnerabilties, what the contibuting factors could be and how to mitigate them.
+On 24th Feb I got the privilege to attend the Africa Hackon Masterclass Q1 edition. This session, facilitated by the highly knowledgeable instructor, Micheal Chesang, is just one of the many great sessions that we had and I specifically chose this Room because I was curious and was excited to learn how to exploit API vulnerabilties, what the contibuting factors could be and how to mitigate them.
 
 The pre-requisite for this masterclass was that you had Burpsuite, Postman and Docker installed. vAPI github respository copied to your local machine and Foxy Proxy extension installed on your firefox extension. A detailed document was provided that guided us on how to have all of the tools downloaded and setup prior to the masterclass.
 
-Postman was used to send requests, Burp suite was used to view the requests and launch attacks, vAPI is the vulnerable API that was being attacked and Docker is what was used to \*\*\*\*start vAPI.
+Postman was used to send requests, Burp suite was used to view the requests and launch attacks, vAPI is the vulnerable API that was being attacked and Docker is what was used to start vAPI.
 
 I observed and attempted to do the lab during the masterclass and later successfully managed to complete the lab after attempting a few more times. In this report, I aim to provide a detailed account of my journey towards successfully completing the lab. I will delve into the steps I undertook, the challenges I faced along the way, and the creative solutions I employed to overcome them. By sharing my experiences, I hope to showcase the process of learning and problem-solving that ultimately led to my achievement.
 
