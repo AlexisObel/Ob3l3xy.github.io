@@ -1,6 +1,5 @@
 ---
 title: Africa Hackon Q1 Masterclass
-subtitle: 2024 API Exploitation - The wrong implementation you should know
 date: 2024-04-02 22:05:00 +3
 categories: CyberSecEvents
 tags:
@@ -12,6 +11,7 @@ tags:
     API,
   ]
 ---
+# 2024 API Exploitation - The wrong implementation you should know
 
 On 24th Feb I got the privilege to attend the Africa Hackon Masterclass Q1 edition. This session, facilitated by the highly knowledgeable instructor, Micheal Chesang, is just one of the many great sessions that we had and I specifically chose this Room because I was curious and was excited to learn how to exploit API vulnerabilties, what the contibuting factors could be and how to mitigate them.
 
