@@ -2,7 +2,7 @@
 title: Africa Hackon Q1 Masterclass
 subtitle: 2024 API Exploitation - The wrong implementation you should know
 date: 2024-04-02 22:05:00 +3
-categories: Cyber Security Events
+categories: CyberSecEvents
 tags:
   [
     API Security,
