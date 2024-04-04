@@ -13,15 +13,15 @@ tags:
 ---
 # 2024 API Exploitation - The wrong implementation you should know
 
-On 24th Feb I got the privilege to attend the Africa Hackon Masterclass Q1 edition. This session, facilitated by the highly knowledgeable instructor, Micheal Chesang, is just one of the many great sessions that we had and I specifically chose this Room because I was curious and was excited to learn how to exploit API vulnerabilties, what the contibuting factors could be and how to mitigate them.
+On 24th Feb I got the privilege to attend the Africa Hackon Masterclass Q1 edition. This session, facilitated by the knowledgeable instructor, Micheal Chesang, is just one of the many great sessions that we had and I specifically chose this Room because I was curious and was excited to learn how to exploit API vulnerabilties, what the contibuting factors could be and how to mitigate them.
 
 The pre-requisite for this masterclass was that you had Burpsuite, Postman and Docker installed. vAPI github respository copied to your local machine and Foxy Proxy extension installed on your firefox extension. A detailed document was provided that guided us on how to have all of the tools downloaded and setup prior to the masterclass.
 
-Postman was used to send requests, Burp suite was used to view the requests and launch attacks, vAPI is the vulnerable API that was being attacked and Docker is what was used to start vAPI.
+Postman was used to send requests, Burp suite was used to view the requests and launch attacks, vAPI is a Vulnerable Adversely Programmed Interface, which is a Self-Hostable PHP Interface that mimics OWASP API Top 10 scenarios in terms of exercises
 
 I observed and attempted to do the lab during the masterclass and later successfully managed to complete the lab after attempting a few more times. In this report, I aim to provide a detailed account of my journey towards successfully completing the lab. I will delve into the steps I undertook, the challenges I faced along the way, and the creative solutions I employed to overcome them. By sharing my experiences, I hope to showcase the process of learning and problem-solving that ultimately led to my achievement.
 
-## API1:2023 - Broken Object Level Authorization
+## API1- Broken Object Level Authorization
 
 A user can have access to another user's records by manipulating the object identifiers. I used postman to create a new user by navigating to `API 1 >Create User> Body` then I added the user's attributes and sent the request.
 
@@ -43,7 +43,7 @@ The expected result was that the details belong to user 1 would be displayed. Th
 
 ![Alt Text](/assets/img/Ai33.JPG)
 
-## API2:2023 - Broken Authentication
+## API2 - Broken Authentication
 
 Weak or non-existent authentication in API endpoints. Several emails and passwords in a worldist were used to attack the target to get a valid user.
 
@@ -104,7 +104,7 @@ The request was sent to intruder to begin the attack process. I then selected th
 
 ![Alt Text](/assets/img/pitch.JPG)
 
-For the request that was sent to intruder, under Payload Positions, I highlighted the email value and clicked add. The same was done for the password value. This was done to configure the positions where the payloads would be added.
+For the request that was sent to intruder, under Payload Positions, I highlighted the email value and clicked add. The same was done for the password value. This was done to add the values as part of the payload for the intruder attack.
 
 ![Alt Text](/assets/img/payload4.JPG)
 
@@ -158,6 +158,35 @@ After sending the request I could see other user's information and a flag was fo
 
 To prevent Broken authentication, properly define what your authentication requirements are and to tailor those requirements to the use case.
 
-## API4:2023 - Unrestricted Resource Consumption
-When there is unlimited or a huge amount of access to system resources, they can be exploited.
+## API4 - Lack of Resources & Rate Limiting
+A mobile number was added in Mobile login by navigating to `API 4 > Mobile Login > Body` and adding any mobile number and sending the request. When you enter a mobile number when trying to login in this case, a four digit OTP is sent to that particular devices for authentication which is why the output displayed "success" and a message stating that a four digit OTP had been semt to the entered mobile number.
+
+![Alt Text](/assets/img/mob.JPG)
+
+Under the HTTP history tab in Burp suite, the posted api4 request was visible and upon clicking on it more information was displayed. 
+
+![Alt Text](/assets/img/mob2.JPG)
+
+For the mobile login to be successful, a valid OTP neeeded to be found. Next, I navigated to Verify OTP and entered a random 4 digit code and after sending the request the output stated that the OTP was invalid, therefore the login failed.
+
+![Alt Text](/assets/img/mob3.JPG)
+
+I viewed the http request from burp suite and sent it to the intruder to begin the intruder attack. I added the OTP value under Payload positions to add it as one of the values for the intruder attack. 
+
+![Alt Text](/assets/img/mob4.JPG)
+
+There were still more settings that I did which included using a payload set of 1 and I created a new Resource pool where the maximum concurrent requests was set to 100 to make the process much faster. Once that was done I started the attack. 
+
+The valid OTP was found and that was simply done by observing the status codes and length of the payloads. It had a status code of 200 an a different length compared to the rest.
+
+![Alt Text](/assets/img/mob5.JPG)
+
+I confirmed the OTP's validity by returning to Postman, entering it, and sending the request. The resulting output indicated successful verification, and the associated key was displayed as well.
+
+![Alt Text](/assets/img/mob6.JPG)
+
+When I tried to send a GET request from postman in order to obtain the details of the user who's phone number made use of the valid OTP, it didn't work. That was another challenge that I faced so instead I copy pasted the key into the authorizaion token and sent the request again, then it worked. The output displayed the user's details and the flag.
+
+![Alt Text](/assets/img/mob7.JPG)
+
 
