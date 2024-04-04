@@ -150,7 +150,7 @@ To login using the valid credentials, I navigated to `Postman> API2> User login`
 
 ![Alt Text](/assets/img/send.JPG)
 
-The challenge of retreiving data resurfaced at this point and I had to edit the GET request by adding the proxy server to replace `{{host}}` and inserted the authentication token which was obtained from the previous step so that I could retreive the user's data.
+The challenge of retreiving data resurfaced at this point and I had to edit the GET request by adding the proxy server to replace `host` and inserted the authentication token which was obtained from the previous step so that I could retreive the user's data.
 
 After sending the request I could see other user's information and a flag was founf for the user with ID number 2.
 
@@ -204,7 +204,7 @@ The screenshot below shows the instructor's GET request and what was meant to di
 
 ![Alt Text](/assets/img/five2.JPG)
 
-This is what my request looked like when I  was viewing it from burp suite. (At this point i'm just sharing screenshots of what I got as evidence that I tried :joy:):
+This is what my request looked like when I  was viewing it from burp suite. (At this point i'm just sharing screenshots of what I got as evidence that I tried :joy: ):
 
 ![Alt Text](/assets/img/five3.JPG)
 
