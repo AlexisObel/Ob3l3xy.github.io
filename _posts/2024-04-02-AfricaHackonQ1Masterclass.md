@@ -13,7 +13,7 @@ tags:
 ---
 # 2024 API Exploitation - The wrong implementation you should know
 
-On 24th Feb I got the privilege to attend the Africa Hackon Masterclass Q1 edition. This session, facilitated by the knowledgeable instructor, Micheal Chesang, is just one of the many great sessions that we had and I specifically chose this Room because I was curious and was excited to learn how to exploit API vulnerabilties, what the contibuting factors could be and how to mitigate them.
+On February 24th, I had the privilege of attending the Africa Hackon Masterclass Q1 edition. This session, facilitated by the knowledgeable instructor, Micheal Chesang, is just one of the many great sessions that we had and I specifically chose this Room because I was curious and was excited to learn how to exploit API vulnerabilties, what the contibuting factors could be and how to mitigate them.
 
 The pre-requisite for this masterclass was that you had Burpsuite, Postman and Docker installed. vAPI github respository copied to your local machine and Foxy Proxy extension installed on your firefox extension. A detailed document was provided that guided us on how to have all of the tools downloaded and setup prior to the masterclass.
 
@@ -188,5 +188,46 @@ I confirmed the OTP's validity by returning to Postman, entering it, and sending
 When I tried to send a GET request from postman in order to obtain the details of the user who's phone number made use of the valid OTP, it didn't work. That was another challenge that I faced so instead I copy pasted the key into the authorizaion token and sent the request again, then it worked. The output displayed the user's details and the flag.
 
 ![Alt Text](/assets/img/mob7.JPG)
+
+## API5 - Broken Function Level Authorization
+Occurs when users and groups have access to functions they shouldn't due to issues with authorization rules. I created a new user in postman by navigating to `API 5 > Create User > Body`, then I added the user's data and sent the request.
+
+![Alt Text](/assets/img/five.JPG)
+
+To get the user's details I sent a GET request from postman. This was meant to display user data without modifying the header by specifying the host and user ID. I had to make specifications because it worked for previous labs as a temporary solution. I guess for this particular part, it wasn't acceptable. 
+
+The screenshot below shows my GET request:
+
+![Alt Text](/assets/img/five1.JPG)
+
+The screenshot below shows the instructor's GET request and what was meant to display after sending it:
+
+![Alt Text](/assets/img/five2.JPG)
+
+This is what my request looked like when I  was viewing it from burp suite. (At this point i'm just sharing screenshots of what I got as evidence that I tried :joy:):
+
+![Alt Text](/assets/img/five3.JPG)
+
+What is should've looked like; where the user's data was being displayed as a response:
+
+![Alt Text](/assets/img/five4.JPG)
+
+I sent my request to the repeater. The reesponse was meant to display information belonging to user 3.
+
+![Alt Text](/assets/img/five5.JPG)
+
+The GET request was changed from `GET /vapi/api5/users HTTP/1.1` to `GET /vapi/api5/users HTTP/1.1` for the response to return information belonging to all users. One of the user's was admin who's address was the flag. 
+
+![Alt Text](/assets/img/five6.JPG)
+
+A tip that we were given was that the easiest way to find endpoints is by going through the source code.
+
+In conclusion, the masterclass was very informative, and I had fun trying out the labs even days after the class. I encountered some challenges with the GET requests, where I had to modify the requests to retrieve data, and some of them did not work as expected. Nevertheless, I am glad that I managed to complete the labs and gained a good understanding of the concepts. I am also interested in exploring other recommended API labs such as Juice Shop and experimenting with API3 – Excessive Data Exposure, which involves a lengthy setup process and requires integration with Android Studio, Genymotion, and Burp Suite. Overall, it was an enjoyable masterclass, and I look forward to the next Africa Hackon event.
+
+
+
+
+
+
 
 
