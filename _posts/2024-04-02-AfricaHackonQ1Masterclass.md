@@ -204,7 +204,7 @@ The screenshot below shows the instructor's GET request and what was meant to di
 
 ![Alt Text](/assets/img/five2.JPG)
 
-This is what my request looked like when I  was viewing it from burp suite. (At this point i'm just sharing screenshots of what I got as evidence that I tried :joy: ):
+This is what my request looked like when I  was viewing it from burp suite. (At this point i'm just sharing screenshots of what I got as evidence that I tried  &#128514; )
 
 ![Alt Text](/assets/img/five3.JPG)
 
