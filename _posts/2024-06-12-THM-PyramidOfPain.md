@@ -1,5 +1,5 @@
 ---
-title: THM PYRAMID OF PAIN
+title: THM Pyramid Of Pain
 date: 2024-06-12 23:55:00 +3
 categories: THM
 tags:
@@ -11,7 +11,6 @@ tags:
   ]
 ---
 
-# Introduction
 When an adversary tries to attack networks, information systems, and other critical
 organization infrastructure, they want to do that without being detected or prevented
 successfully. The evidence left behind by the attacker, whether it’s in the form of what they
@@ -91,6 +90,7 @@ addresses, and the DNS requests that were made to check for connectivity.
 I added a “+” at the end of the URL and the website disclosed the website that it redirects to.
 
 ![Alt Text](/assets/img/pdomain2.jpg)
+
 
 # Host Artifacts (Annoying)
 Host artifacts are tracks of the attackers' activity that was left behind on a host machine. I can
@@ -175,32 +175,36 @@ To capture the flag, the static site involved matching the appropriate statement
 respective IOC in the pyramid of pain. I managed to capture the flag but here is my
 reasoning behind every option:
 
-> The attacker has utilized these to accomplish their objective - **Tools**
-An attacker needs tools that will help with identifying vulnerable machines and networks up to the point of maintaining access using backdoors before they can achieve their objectives.
-{: .prompt-red }
+> **The attacker has utilized these to accomplish their objective - Tools**
+>
+>*An attacker needs tools that will help with identifying vulnerable machines and networks up to the point of maintaining access using backdoors before they can achieve their objectives.*
+{: .prompt-info }
 
-> The attacker's plans and objectives - **TTP**
-The techniques and procedures describe the methods and detailed steps of the attackers respectfully.
-{: .prompt-orange }
+> **The attacker's plans and objectives - TTP**
+>
+>*The techniques and procedures describe the methods and detailed steps of the attackers respectfully.*
+{: .prompt-info }
 
-> These signatures can be used to attribute payloads and artifacts to an actor - **Hash values**
-Hash values can be used to identify malicious files and malware samples.
-{: .prompt-yellow }
+> **These signatures can be used to attribute payloads and artifacts to an actor - Hash values**
+>
+>*Hash values can be used to identify malicious files and malware samples.*
+{: .prompt-info }
 
-> An attacker has purchased this and used it in a type-squatting campaign - **Domain Names** 
-Also known as domain-squatting, domain names similar to legitimate ones are used for
-malicious activities.
-{: .prompt-green }
+> **An attacker has purchased this and used it in a type-squatting campaign - Domain Names** 
+>
+> *Also known as domain-squatting, domain names similar to legitimate ones are used for malicious activities.*
+{: .prompt-info }
 
-> These addresses can be used to identify the infrastructure an attacker is using for their
-campaign - **IP addresses**
-Websites and network devices are identified by IP addresses. Both
-can be used in the form of malicious websites, compromised hosts such as bots, etc
-{: .prompt-blue }
+> **These addresses can be used to identify the infrastructure an attacker is using for their campaign - IP addresses**
+>
+>*Websites and network devices are identified by IP addresses. Both can be used in the form of malicious websites, compromised hosts such as bots, etc*
+{: .prompt-info }
 
-> These artifacts can present themselves as C2 traffic for example - **Network**
-C2 traffic is a type of network artifact
-{: .prompt-gray }
+> **These artifacts can present themselves as C2 traffic for example - Network**
+>
+>*C2 traffic is a type of network artifact*
+{: .prompt-info }
+
 
 
 That concludes the Pyramid of Pain learning path on THM, onto the next! &#x1F60A;
