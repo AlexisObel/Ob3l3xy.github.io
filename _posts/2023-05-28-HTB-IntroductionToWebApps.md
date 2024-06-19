@@ -4,8 +4,8 @@ date: 2023-05-28 07:27:00 +3
 categories: HTB
 tags: [Web Apps, Web App Security, Web fundamentals] 
 ---
-
-In order to be able to secure web applications, an understanding of how web applications work, their architecture and vulnerabilites is important to be able to secure them effectively. In this post, I will demonstrate how I went about the labs in this module of HTB Academy.
+<p style="text-align: justify;">
+In order to be able to secure web applications, an understanding of how web applications work, their architecture and vulnerabilites is important to be able to secure them effectively. In this post, I will demonstrate how I went about the labs in this module of HTB Academy.</p>
 
 ## Front End Components
 
@@ -85,14 +85,14 @@ WAMP is a type of combination for back end servers. It consists of Windows, Apac
 ### Web Servers
 
 > **Q: If a web server returns an HTTP code 201, what does it stand for?** created
-
-HTTP codes are number responses from the web server and each number combination means something. 201 meaning created, 404 meaning not found and so on.
+<p style="text-align: justify;">
+HTTP codes are number responses from the web server and each number combination means something. 201 meaning created, 404 meaning not found and so on.</p>
 
 ### Databases
 
 > **Q: What type of database is Google's Firebase Database?** NoSQL
-
-Databases store web application information. NoSQL falls under the category on non-relational databses meaning that it lacks the structure of tables consisting of rows and columns.
+<p style="text-align: justify;">
+Databases store web application information. NoSQL falls under the category on non-relational databses meaning that it lacks the structure of tables consisting of rows and columns.</p>
 
 ### Development Frameworks & APIs
 
@@ -111,8 +111,8 @@ I changed the id to 1 as directed by the question. The page displayed the user *
 ### Common Web Vulnerabilities
 
 > __Q: To which of the above categories does public vulnerability 'CVE-2014-6271' belongs to?__ Command Injection
-
-The CVE (Common Vulnerabilities and Exposures) database by MITRE corporation https://cve.mitre.org/, contains information about hardware and software vulnerabilities and each vulnerability has a unique identifier. To figure our the category of the given vulnerability, I searched for it in the CVE database. 
+<p style="text-align: justify;">
+The CVE (Common Vulnerabilities and Exposures) database by MITRE corporation https://cve.mitre.org/, contains information about hardware and software vulnerabilities and each vulnerability has a unique identifier. To figure our the category of the given vulnerability, I searched for it in the CVE database. </p>
 
 ![Alt Text](/assets/img/cve.JPG)
 
@@ -120,8 +120,8 @@ The CVE (Common Vulnerabilities and Exposures) database by MITRE corporation htt
 
 ### Public Vulnerabilities 
 > __Q:  What is the CVSS score of the public vulnerability CVE-2017-0144?__ 9.3
-
-The CVSS (Common Vulnerability Scoring System), is an open-source industry standard for assessing the severity of security vulnerabilities. Use version 2 https://nvd.nist.gov/vuln-metrics/cvss/v2-calculator to calculate the level of severity of CVE-2017-0144. 
+<p style="text-align: justify;">
+The CVSS (Common Vulnerability Scoring System), is an open-source industry standard for assessing the severity of security vulnerabilities. Use version 2 https://nvd.nist.gov/vuln-metrics/cvss/v2-calculator to calculate the level of severity of CVE-2017-0144. </p>
 
 ![Alt Text](/assets/img/cvss.JPG)
 

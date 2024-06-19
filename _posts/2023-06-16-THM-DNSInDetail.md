@@ -6,16 +6,16 @@ tags: [Networking, DNS]
 ---
 
 ## What is DNS?
-
-We can communicate with devices online in a straightforward and user-friendly manner thanks to the Domain Name System,or DNS for short. It functions by converting machine-readable IP addresses, which are used to find and connect with certain devices on the internet, into human-readable domain names, such as google.com. Without DNS, accessing websites would require us to memorize long lists of numbers, which is a lot of work.
+<p style="text-align: justify;">
+We can communicate with devices online in a straightforward and user-friendly manner thanks to the Domain Name System,or DNS for short. It functions by converting machine-readable IP addresses, which are used to find and connect with certain devices on the internet, into human-readable domain names, such as google.com. Without DNS, accessing websites would require us to memorize long lists of numbers, which is a lot of work. </p>
 
 > **Q: What does DNS stand for?** Domain Name System
 
 ## Domain Hierarchy
 
 > **Q: What is the maximum length of a subdomain?** 63
-
-A subdomain name has the same creation restrictions as a SecondLevel Domain, being limited to 63 characters and can only use a-z 0-9 and hyphens (cannot start or end with hyphens or have consecutive hyphens).
+<p style="text-align: justify;">
+A subdomain name has the same creation restrictions as a SecondLevel Domain, being limited to 63 characters and can only use a-z 0-9 and hyphens (cannot start or end with hyphens or have consecutive hyphens).</p>
 
 > **Q: Which of the following characters cannot be used in a subdomain (3 b \_ -)?** \_
 
@@ -32,8 +32,8 @@ Still according to the domain name standards, the length must be kept to 253 cha
 > **Q: What type of record would be used to advise where to send email?** MX
 
 > **Q: What type of record handles IPv6 addresses?** AAAA
-
-An AAAA record is similar to an A record, but it associates a domain name with an IPv6 address, which is used to locate and connect to devices on networks that support IPv6.
+<p style="text-align: justify;">
+An AAAA record is similar to an A record, but it associates a domain name with an IPv6 address, which is used to locate and connect to devices on networks that support IPv6. <p>
 
 ## Making A Request
 

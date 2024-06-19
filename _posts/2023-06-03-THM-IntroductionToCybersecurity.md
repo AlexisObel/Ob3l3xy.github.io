@@ -4,18 +4,18 @@ date: 2023-06-03 01:59:00 +3
 categories: THM
 tags: [Web Apps, Web App Security, Web fundamentals, Digital Forensics, SOC, Offensive Security, Defensive Security]
 ---
-
-The learning path offered by Try Hack Me gives a proper introduction to cyber security by explaining the fundamentals which include an introduction to other fundamental topics such as offensive security, and defensive security. Knowledge about this will lay a strong foundation for tackling more advanced topics in cybersecurity as well as provide insights on some careers in the field.
+<p style="text-align: justify;">
+The learning path offered by Try Hack Me gives a proper introduction to cyber security by explaining the fundamentals which include an introduction to other fundamental topics such as offensive security, and defensive security. Knowledge about this will lay a strong foundation for tackling more advanced topics in cybersecurity as well as provide insights on some careers in the field.</p>
 
 ## Introduction to offensive security
-
-Offensive security is breaking into systems by taking advantage of software bugs and other system vulnerabilities just the way a hacker would do. This will help in improving the security of a system once the weaknesses have been identified through offensive security. Defensive security on the other hand prevents hackers from breaking into systems by closely monitoring threats and malicious activity.
+<p style="text-align: justify;">
+Offensive security is breaking into systems by taking advantage of software bugs and other system vulnerabilities just the way a hacker would do. This will help in improving the security of a system once the weaknesses have been identified through offensive security. Defensive security on the other hand prevents hackers from breaking into systems by closely monitoring threats and malicious activity.</p>
 
 > **Q: Which of the following options better represents the process where you simulate a hacker's actions to find vulnerabilities in a system?** Offensive security
 
 ### Hacking your first machine
-
-Upon starting the machine there is a fake bank application that loads on the screen. It shows a user’s bank account details which include their bank account number, balance, transaction history and accounts that he contains.
+<p style="text-align: justify;">
+Upon starting the machine there is a fake bank application that loads on the screen. It shows a user’s bank account details which include their bank account number, balance, transaction history and accounts that he contains.</p>
 
 ![Alt Text](/assets/img/fbank.JPG)
 
@@ -77,8 +77,8 @@ Defensive security is in many areas which include:
 > **Q: Which kind of malware requires the user to pay money to regain access to their files?** Ransomware
 
 ### Practical example of Defensive Security
-
-Security Information and event management systems are used by SOC analysts to obtain security information and events that are happening within different systems in the organizations which makes it easy for them to keep track of what is happening in case something unusual takes place.
+<p style="text-align: justify;">
+Security Information and event management systems are used by SOC analysts to obtain security information and events that are happening within different systems in the organizations which makes it easy for them to keep track of what is happening in case something unusual takes place.</p>
 
 Finding the malicious IP address; I managed to identify unauthorized connection in the alert logs as shown below:
 
@@ -87,8 +87,8 @@ Finding the malicious IP address; I managed to identify unauthorized connection 
 I had to check if this IP address was invalid by searching for it in an IP scanner website. It detected the IP address as malicious:
 
 ![Alt Text](/assets/img/alrt2.JPG)
-
-As a Junior (Associate) Security Analyst, I was to inform the head of the SOC department who is the SOC Team Lead about this matter. Next, I got the go ahead to block the malicious IP address in the firewall blocklist which already contains other malicious IP addresses that were blocked earlier.
+<p style="text-align: justify;">
+As a Junior (Associate) Security Analyst, I was to inform the head of the SOC department who is the SOC Team Lead about this matter. Next, I got the go ahead to block the malicious IP address in the firewall blocklist which already contains other malicious IP addresses that were blocked earlier.</p>
 
 ![Alt Text](/assets/img/alrt3.JPG)
 
@@ -97,8 +97,8 @@ Through successfully blocking the IP address I also obtained a HTB flag
 {: .prompt-tip }
 
 ### Introduction to Offensive Security
-
-A web application is a program running on a remote server and it provides services to its users e.g., Office documentation (Microsoft office 365). Web applications work such that the web application initially loads the landing page, then in case the user searches for something, this request is sent to the server in the backend. The server in the backend looks for the requested page in the database and responds by sending it back to the web application where it is displayed.
+<p style="text-align: justify;">
+A web application is a program running on a remote server and it provides services to its users e.g., Office documentation (Microsoft office 365). Web applications work such that the web application initially loads the landing page, then in case the user searches for something, this request is sent to the server in the backend. The server in the backend looks for the requested page in the database and responds by sending it back to the web application where it is displayed.</p>
 
 Bug bounty program – when companies offer rewards to people that find system vulnerabilities in their systems.
 
@@ -156,8 +156,8 @@ Digital forensics process:
 > **Q: It is essential to keep track of who is handling it at any point in time to ensure that evidence is admissible in the court of law. What is the name of the documentation that would help establish that?** Chain of Custody
 
 #### Practical example of Digital Forensics
-
-Gado the cat had been kidnapped but the kidnapper sent a letter to the owner. I was to gather evidence and use it to find where the cat was. The kidnapper sent a word document with requests. The word document was converted to PDF format and the image was extracted from the word document.
+<p style="text-align: justify;">
+Gado the cat had been kidnapped but the kidnapper sent a letter to the owner. I was to gather evidence and use it to find where the cat was. The kidnapper sent a word document with requests. The word document was converted to PDF format and the image was extracted from the word document.</p>
 
 I navigated to the folder containing the files(evidence) gathered for this case using the cd command. ls was used to list the files in that directory:
 
@@ -204,7 +204,8 @@ Tasks performed by SOC analysts:
 * Support with the incident response
 
 #### Practical example of SOC 
-The objective was to stop malicious packets from being sent from the source to the server of the organization. This can only be done by blocking the packets from being transmitted by adding firewall rules. Such as modifying the rules such that packets from a particular source cannot be allowed to get to destination through a specified port. Here are some results that I got in the process.
+<p style="text-align: justify;">
+The objective was to stop malicious packets from being sent from the source to the server of the organization. This can only be done by blocking the packets from being transmitted by adding firewall rules. Such as modifying the rules such that packets from a particular source cannot be allowed to get to destination through a specified port. Here are some results that I got in the process.</p>
 
 ![Alt Text](/assets/img/df6.JPG)
 

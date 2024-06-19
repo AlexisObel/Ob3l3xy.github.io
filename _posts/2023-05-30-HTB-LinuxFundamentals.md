@@ -4,8 +4,8 @@ date: 2023-05-30 07:27:00 +3
 categories: HTB
 tags: [Linux fundamentals, Cybersecurity, Linux security]
 ---
-
-Understanding operating systems is crucial for cybersecurity. Before hackers make use of tools, they install and deploy attacking software like ransomware using the operating system. Hackers also attack people's operating systems to try and have acces to sensitive information, the network itself and even stop people from having access to their systems which can hinder productivity and business contnuity. As a cybersecurity professional, understanding the operating systems can help when identifying vulnerabilities, attacks when they are happening or when they have happened and ways in which we can make use of the operating system alongside other tools to secure other operating systems and networks from cyber attacks.
+<p style="text-align: justify;">
+Understanding operating systems is crucial for cybersecurity. Before hackers make use of tools, they install and deploy attacking software like ransomware using the operating system. Hackers also attack people's operating systems to try and have acces to sensitive information, the network itself and even stop people from having access to their systems which can hinder productivity and business contnuity. As a cybersecurity professional, understanding the operating systems can help when identifying vulnerabilities, attacks when they are happening or when they have happened and ways in which we can make use of the operating system alongside other tools to secure other operating systems and networks from cyber attacks.</p>
 
 ### The Shell
 
@@ -18,8 +18,8 @@ uname -m
 ````
 
 > **Q: What is the path to htb-student's home directory?** /home/htb-student
-
-The pwd command is a shell command that stands for "print working directory". When you run the pwd command in a terminal or command prompt, it prints the full path of the current working directory, which is the directory that you are currently in. That’s how I was able to find the path.
+<p style="text-align: justify;">
+The pwd command is a shell command that stands for "print working directory". When you run the pwd command in a terminal or command prompt, it prints the full path of the current working directory, which is the directory that you are currently in. That’s how I was able to find the path.</p>
 
 ![Alt Text](/assets/img/pwd2.JPG)
 
@@ -162,8 +162,8 @@ The command `dpkg --list | grep ii | wc -l` outputs the total number of installe
 ### Filter contents
 
 > __Q: How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)__ 7
-
-When executed, -l will display a list of all the open network connections on the system, along with the associated protocol, local and remote IP addresses, and port numbers. The -l option specifically instructs netstat to only show listening sockets, which are endpoints of a communication channel that are waiting for incoming connections. This can be particularly useful for network administrators who need to troubleshoot network issues or for security analysts who need to monitor network activity.
+<p style="text-align: justify;">
+When executed, -l will display a list of all the open network connections on the system, along with the associated protocol, local and remote IP addresses, and port numbers. The -l option specifically instructs netstat to only show listening sockets, which are endpoints of a communication channel that are waiting for incoming connections. This can be particularly useful for network administrators who need to troubleshoot network issues or for security analysts who need to monitor network activity.</p>
 
 ![Alt Text](/assets/img/netstat.JPG)
 
