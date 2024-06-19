@@ -23,7 +23,7 @@ compromise within the pyramid and the level of pain it inflicts on the attacker 
 so to that extent.
 
 
-![Alt Text](/assets/img/pyramid.PNG)
+![Alt Text](/assets/img/pyramid.png)
 
 _Image from https://gblogs.cisco.com/ca/2020/08/26/the-canadian-bacon-cisco-security-and-the-pyramid-of-pain/_
 
