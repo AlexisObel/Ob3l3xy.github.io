@@ -23,7 +23,7 @@ compromise within the pyramid and the level of pain it inflicts on the attacker 
 so to that extent.
 
 
-![Alt Text](/assets/img/pyramid.png)
+![Alt Text](/assets/img/pyramid.PNG)
 
 _Image from https://gblogs.cisco.com/ca/2020/08/26/the-canadian-bacon-cisco-security-and-the-pyramid-of-pain/_
 
@@ -43,7 +43,7 @@ it to change its hash value, and it would be considered safe.
 
 > **Q: Analyse the report associated with the hash "b8ef959a9176aef07fdca8705254a163b50b49a17217a4ff0107487f59d4a35d" here. What is the filename of the sample?** Sales_Receipt 5606.xls
 
-![Alt Text](/assets/img/phash.jpg)
+![Alt Text](/assets/img/phash.JPG)
 
 # IP Address (Easy)
 IP addresses are used to identify devices in a network and in the context of web applications,
@@ -60,7 +60,7 @@ malicious process.
 > **Q: Read the following report to answer this question. What is the first IP address the malicious process (PID 1632) attempts to communicate with?** 50.87.136.52
 > **Q: Read the following report to answer this question. What is the first domain name the malicious process (PID 1632) attempts to communicate with?** craftingalegacy.com
 
-![Alt Text](/assets/img/pip.jpg)
+![Alt Text](/assets/img/pip.JPG)
 
 # Domain Names (Simple)
 A domain name is a string of text that serves as a unique identifier for a website. It’s also
@@ -79,7 +79,7 @@ addresses, and the DNS requests that were made to check for connectivity.
 
 > **Q: Go to this report on app.any.run and provide the first suspicious URL request you are seeing; you will be using this report to answer the remaining questions of this task.** craftingalegacy.com
 
-![Alt Text](/assets/img/pdomain.jpg)
+![Alt Text](/assets/img/pdomain.JPG)
 
 > **Q: What term refers to an address used to access websites?** Domain Name
 
@@ -89,7 +89,7 @@ addresses, and the DNS requests that were made to check for connectivity.
 
 I added a “+” at the end of the URL and the website disclosed the website that it redirects to.
 
-![Alt Text](/assets/img/pdomain2.jpg)
+![Alt Text](/assets/img/pdomain2.JPG)
 
 
 # Host Artifacts (Annoying)
@@ -103,15 +103,15 @@ to invest time and other resources to find other adversary tools that are more d
 
 > **Q: A process named regidle.exe makes a POST request to an IP address based in the United States (US) on port 8080. What is the IP address?** 96.126.101.6
 
-![Alt Text](/assets/img/phost.jpg)
+![Alt Text](/assets/img/phost.JPG)
 
 > **Q: The actor drops a malicious executable (EXE). What is the name of this executable?** G_jugk.exe
 
-![Alt Text](/assets/img/phost2.jpg)
+![Alt Text](/assets/img/phost2.JPG)
 
 > **Q: Look at this report by Virustotal. How many vendors determine this host to be malicious?** 9
 
-![Alt Text](/assets/img/phost3.jpg)
+![Alt Text](/assets/img/phost3.JPG)
 
 # Network Artifacts (Annoying)
 Network artifacts are tracks of the attackers' activity that was left behind on a network. Just
@@ -123,11 +123,11 @@ detected, stronger security measures can be put in place.
 
 > **Q: What browser uses the User-Agent string shown in the screenshot above?**  Internet Explorer
 
-![Alt Text](/assets/img/pnetwork.jpg)
+![Alt Text](/assets/img/pnetwork.JPG)
 
 > **Q: How many POST requests are in the screenshot from the pcap file?** 6
 
-![Alt Text](/assets/img/pnetwork2.jpg)
+![Alt Text](/assets/img/pnetwork2.JPG)
 
 # Tools (Challenging)
 Tools are software tools and platforms used by the attacker to perform their attacks. At this
@@ -159,7 +159,7 @@ attack.
 
 > **Q; Navigate to ATT&CK Matrix webpage. How many techniques fall under the Exfiltration category?** 9
 
-![Alt Text](/assets/img/pttps.jpg)
+![Alt Text](/assets/img/pttps.JPG)
 
 > **Q: Chimera is a China-based hacking group that has been active since 2018. What is the name of the commercial, remote access tool they use for C2 beacons and data exfiltration?** Cobalt Strike 
 
@@ -167,7 +167,7 @@ I got to the groups section of the website through the cyber threat intelligence
 looked for Chimera. I got to see the techniques and software used by the group and Cobalt strike was listed as the remote access tool to implement the Exfiltration Over C2 Channel
 technique.
 
-![Alt Text](/assets/img/pttps2.jpg)
+![Alt Text](/assets/img/pttps2.JPG)
 
 > **Q: Complete the static site. What is the flag?** THM{PYRAMIDS_COMPLETE}
 
