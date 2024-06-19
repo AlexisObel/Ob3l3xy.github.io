@@ -189,7 +189,6 @@ exclude:
   - "*.gemspec"
   - docs
   - tools
-  - _site
   - README.md
   - LICENSE
   - rollup.config.js
