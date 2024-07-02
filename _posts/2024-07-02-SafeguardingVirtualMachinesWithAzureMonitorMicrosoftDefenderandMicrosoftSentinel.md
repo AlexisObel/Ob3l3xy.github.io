@@ -21,7 +21,7 @@ The exercise consists of three labs: Azure Monitor, Microsoft Defender, and Micr
 Sentinel.
 </p>
 <p style="text-align: justify;">
-The Azure Monitor lab covers working with Azure Monitor, which is used to monitor and manage Azure resources. It enables me to deploy an Azure virtual machine, create a Log Analytics workspace, set up an Azure account, and establish a data collection rule. Collectively,these tasks allow me to monitor performance, track logs, and gain insights into my infrastructure.
+The Azure Monitor lab covers working with Azure Monitor, which is used to monitor and manage Azure resources. It enables me to deploy an Azure virtual machine, create a Log Analytics workspace, set up an Azure account, and establish a data collection rule. Collectively, these tasks allow me to monitor performance, track logs, and gain insights into my infrastructure.
 </p>
 <p style="text-align: justify;">
 The Microsoft Defender for Cloud involves exploring Microsoft Defender for Cloud to protect the virtual machine deployed in the previous lab. It allows me to configure monitoring for a virtual machine, review security recommendations, set up Just-In-Time (JIT) VM access, and use the secure score to assess and improve the security posture of my environment.
@@ -364,5 +364,403 @@ on the secure score. </p>
 
 # Lab 10: Microsoft Sentinel
 
+I have been asked to create a proof of concept of Microsoft Sentinel-based threat detection and response. Specifically, I want to:
+
+* Start collecting data from Azure Activity and Microsoft Defender for Cloud.
+* Add built-in and custom alerts
+* Review how Playbooks can be used to automate a response to an incident.
+
+**Microsoft Sentinel diagram**
+
+![Alt Text](/assets/img/MS1.JPG)
+
+## Exercise 1: Implement Microsoft Sentinel
+
+In this exercise, I will complete the following tasks:
+
+* Task 1: On-board Microsoft Sentinel
+* Task 2: Connect Azure Activity to Sentinel
+* Task 3: Create a rule that uses the Azure Activity data connector.
+* Task 4: Create a playbook
+* Task 5: Create a custom alert and configure the playbook as an automated response.
+* Task 6: Invoke an incident and review the associated actions.
+
+### Task 1: On-board Azure Sentinel
+
+I signed in to the Azure portal https://portal.azure.com/.
+In the Azure portal, in the **Search resources, services, and docs** text box at the top of the
+Azure portal page, type **Microsoft Sentinel** and press the **Enter** key.
+
+![Alt Text](/assets/img/MS2.JPG)
+
+On the **Microsoft Sentinel** blade, I clicked **+ Create**.
+
+![Alt Text](/assets/img/MS3.JPG)
+
+On the **Add Microsoft Sentinel** to a workspace blade,I selected the Log Analytics workspace
+I created in the Azure Monitor lab and clicked **Add**.
+
+![Alt Text](/assets/img/MS4.JPG)
+
+### Task 2: Configure Microsoft Sentinel to use the Azure Activity data connector.
+
+In the Azure portal, on the **Microsoft Sentinel |Overview blade**, 
+in the **Content management** section, I clicked **Content hub** and reviewed the list of available content some of which included Sentinel SOAR Essentials, SOC Handbook, Apache Tomcat, Microsoft Defender XDR and many others.
+
+![Alt Text](/assets/img/MS5.JPG)
+
+I typed **Azure** into the search bar and selected the entry representing **Azure Activity**. I
+reviewed its description at the far right and then clicked **Install**.
+
+![Alt Text](/assets/img/MS6.JPG)
+
+I waited for the **Install Success** notification. In the left navigation panel, in the **Configuration** section, I clicked **Data connectors**. On the **Microsoft Sentinel | Data connectors** blade, I clicked **Refresh** and reviewed the list of available connectors. **Azure Activity** and **Security
+Events via Legacy Agent** were the available connectors listed. I selected the entry representing the **Azure Activity** connector, I reviewed its description and status at the far right, and then clicked **Open connector page**.
+
+![Alt Text](/assets/img/MS7.JPG)
+
+On the **Azure Activity** blade the **Instructions** tab was selected, I noted the **Prerequisites** and
+scrolled down to the **Configuration**. It provided information that described the connector
+update as follows: “This connector has been updated to use the diagnostics settings back-end
+pipeline. which provides increased functionality and better consistency with resource logs.
+Connectors using this pipeline can also be governed at scale by Azure Policy.”
 
 
+My Azure Pass subscription never used the legacy connection method,so I skipped step 1 (the
+Disconnect All button was grayed out) and proceeded to step 2.
+
+In step 2,I **connected my subscriptions through diagnostic settings new pipeline**, reviewed
+the “Launch the Azure Policy Assignment wizard and follow the steps” instructions then
+clicked **Launch the Azure Policy Assignment wizard>.**
+
+![Alt Text](/assets/img/MS8.JPG)
+
+On the **Configure Azure Activity logs to stream to specified Log Analytics workspace**
+(Assign Policy page) **Basics** tab, I clicked the **Scope ellipsis** (…) button. In the **Scope** page, I
+chose my Azure Pass subscription from the drop-down subscription list and clicked the **Select**
+button at the bottom of the page.
+
+![Alt Text](/assets/img/MS9.JPG)
+
+I clicked the **Next** button at the bottom of the **Basics** tab twice to proceed to the **Parameters** tab.
+
+![Alt Text](/assets/img/MS10.JPG)
+
+On the **Parameters** tab, I clicked the **Primary Log Analytics workspace** ellipsis (…) button.
+In the **Primary Log Analytics workspace page**, I selected my Azure subscription and used
+the **workspaces** drop-down to select the Log Analytics workspace I was using for Sentinel.
+When done, I clicked the **Select** button at the bottom of the page.
+
+![Alt Text](/assets/img/MS11.JPG)
+
+I clicked the **Next** button at the bottom of the **Parameters** tab to proceed to the **Remediation** tab.
+
+![Alt Text](/assets/img/MS12.JPG)
+
+On the **Remediation** tab, I selected the **Create a remediation task** checkbox. This enabled
+the “Configure Azure Activity logs to stream to specified Log Analytics workspace” in the
+**Policy to remediate** drop-down. In the **System assigned identity location** drop-down, I
+selected the region (East US for example) you selected earlier for your Log Analytics workspace.
+
+I clicked the **Next** button at the bottom of the Remediation tab to proceed to the Noncompliance message tab.
+
+![Alt Text](/assets/img/MS13.JPG)
+
+I entered a Non-compliance message that said, “The activity logs configuration for this Azure
+resource is incomplete, kindly review to ensure compliance” which means that for any Azure
+resource that wants to make use of my log analytics workspace, the log configurations of that
+resource needs to comply with the standards of my log analytics workspace for its logs to be
+analyzed. I clicked the **Review + Create** button at the bottom of the **Non-compliance message** tab.
+
+![Alt Text](/assets/img/MS14.JPG)
+
+I clicked the **Create** button. I observed three successful status messages: **Creating policy assignment succeeded, Role Assignments creation succeeded, and Remediation task creation succeeded**.
+
+![Alt Text](/assets/img/MS15.JPG)
+
+I verified that the Azure Activity pane displayed the **Data received graph** and I clicked on
+**“Go to log analytics”** within the Azure Activity Pane to view more information about it. 
+
+![Alt Text](/assets/img/MS16.JPG)
+
+There was KQL code that was being used for data analysis and visualization. It analyzed the
+Azure Activity data by identifying the maximum counts of activities per day, representing the
+results on a time chart. The results on both the chart and results tab displayed those 10
+instances of Azure activity that occurred on the 25th of June 2024. I also noticed the four Log
+Management tables on the loft which included AzureActivity, Heartbeat, Perf, and Usage.
+
+![Alt Text](/assets/img/MS17.JPG)
+
+### Task 3: Create a rule that uses the Azure Activity data connector.
+
+On the **Microsoft Sentinel|Configuration** blade, 
+I clicked Analytics.
+
+![Alt Text](/assets/img/MS18.JPG)
+
+On the **Microsoft Sentinel|Analytics** blade, 
+I clicked the **Rule Templates** tab. I reviewed some of the types of rules that I can create such as **NRT Microsoft Entra ID Hybrid Health AD FS New Server, Creating incidents based on Microsoft Cloud App Security alerts, Anomalous RDP Login Detections (this uses Machine learning)**, and each rule type is associated with a Data source.
+
+![Alt Text](/assets/img/MS19.JPG)
+
+In the listing of rule templates, I typed **Suspicious** into the search bar form and clicked the
+**Suspicious number of resource creation or deployment** (a medium severity rule) entry
+associated with the **Azure Activity** data source. Then, in the pane displaying the rule template
+properties, I clicked **Create rule**.
+
+![Alt Text](/assets/img/MS20.JPG)
+
+On the **General** tab of the **Analytics rule wizard - Create a new Scheduled rule** blade, I
+accepted the default settings and clicked **Next: Set rule logic >**.
+
+![Alt Text](/assets/img/MS21.JPG)
+
+On the **Set rule logic** tab of the **Analytics rule wizard - Create a new Scheduled rule**
+blade, I accepted the default settings and clicked **Next: Incident settings (Preview) >.**
+
+![Alt Text](/assets/img/MS22.JPG)
+
+On the **Incident settings** tab of the **Analytics rule wizard - Create a new Scheduled rule**
+blade, accept the default settings and click **Next: Automated response >**. This is where a playbook can be added, implemented as a Logic App, to a rule to automate the remediation
+of an issue.
+
+![Alt Text](/assets/img/MS23.JPG)
+
+On the **Automated response** tab of the **Analytics rule wizard - Create a new Scheduled rule** blade, I accepted the default settings and clicked **Next: Review and create >.**
+
+![Alt Text](/assets/img/MS24.JPG)
+
+On the **Review and create** tab of the **Analytics rule wizard - Create a new Scheduled** rule
+blade, I clicked **Save**.
+
+![Alt Text](/assets/img/MS25.JPG)
+
+An active rule was created as listed in the table below:
+
+![Alt Text](/assets/img/MS26.JPG)
+
+### Task 4: Create a playbook
+In this task, I will create a playbook. A security playbook is a collection of tasks that can be
+invoked by Microsoft Sentinel in response to an alert.
+
+In the Azure portal, in the **Search resources, services, and docs** text box at the top of the
+Azure portal page, I typed **Deploy a custom template** and pressed the **Enter** key.
+
+![Alt Text](/assets/img/MS27.JPG)
+
+On the **Custom deployment blade**, I clicked the **Build your own template in the editor** option.
+
+![Alt Text](/assets/img/MS28.JPG)
+
+On the **Edit template** blade, clicked **Load file**, located the
+**\Allfiles\Labs\15\changeincidentseverity.json** file from a shared link
+https://microsoftlearning.github.io/AZ500-AzureSecurityTechnologies/, and clicked **Open**.
+On the **Edit template** blade, I clicked **Save**.
+
+![Alt Text](/assets/img/MS29.JPG)
+
+On the **Custom deployment** blade, I ensured that the following settings were configured (l
+left any others with their default values):
+
+* Subscription: **Azure for Students**
+* Resource group: **AZ500LAB131415**
+* Location:**(US) East US**
+* Playbook Name: **Change-Incident-Severity**
+* User Name: **obelalexisadich@outlook.com**
+
+I clicked **Review + Create** and then clicked **Create**.
+
+![Alt Text](/assets/img/MS30.JPG)
+
+![Alt Text](/assets/img/MS31.JPG)
+
+In the Azure portal, in the **Search resources, services, and docs** text box at the top of the
+Azure portal page, I typed **Resource groups** and pressed the **Enter** key.
+
+![Alt Text](/assets/img/MS32.JPG)
+
+On the **Resource groups** blade, in the list of resource groups, I clicked the **AZ500LAB131415**
+entry. On the **AZ500LAB131415** resource group blade, in the list of resources, I clicked the
+entry representing the newly created **Change-Incident-Severity** logic app.
+
+![Alt Text](/assets/img/MS33.JPG)
+
+On the **Change-Incident-Severity** blade, I clicked **Edit**. The Logic Apps Designer blade, each
+of the four s displayed a warning meaning that each needed to be reviewed and configured.
+
+![Alt Text](/assets/img/MS34.JPG)
+
+On the **Logic Apps Designer** blade, I clicked the first s step. I clicked **Add new**, then ensured
+that the entry in the Tenant drop down list contained my Azure AD tenant name and clicked
+**Sign-in**.
+
+![Alt Text](/assets/img/MS35.JPG)
+
+![Alt Text](/assets/img/MS36.JPG)
+
+When prompted, I signed in with the user account that has the Owner or Contributor role in
+the Azure subscription I was using for this lab. This connected me to Microsoft Sentinel using
+my account which enabled me to use the outputs in the subsequent steps. 
+
+![Alt Text](/assets/img/MS37.JPG)
+
+I clicked the second s step and, in the list of s, selected the second entry, representing the one I
+created in the previous step.I repeated the previous step in the remaining two s steps ensuring
+that no warnings were being displayed in any of the steps.
+
+![Alt Text](/assets/img/MS38.JPG)
+
+![Alt Text](/assets/img/MS39.JPG)
+
+![Alt Text](/assets/img/MS40.JPG)
+
+On the **Logic Apps Designer** blade, I clicked **Save** to save my changes.
+
+### Task 5: Create a custom alert and configure a playbook as an automated response
+
+In the Azure portal, I navigated back to the **Microsoft Sentinel|Overview blade**.
+
+![Alt Text](/assets/img/MS41.JPG)
+
+On the **Microsoft Sentinel|Overview** blade, in the Configuration section, I clicked
+**Analytics**. Then I clicked **+ Create** and, in the drop-down menu, clicked **Scheduled query rule.**
+
+![Alt Text](/assets/img/MS42.JPG)
+
+On the **General** tab of the **Analytics rule wizard - Create a new Scheduled rule** blade, I
+specified the following settings (I left others with their default values) then clicked **Next: Set rule logic >.:**
+
+* Name: **Playbook Demo**
+* Tactics: **Initial Access**
+
+![Alt Text](/assets/img/MS43.JPG)
+
+On the **Set rule logic** tab of the **Analytics rule wizard - Create a new Scheduled rule** blade,
+in the **Rule query** text box, I pasted the following rule query that identifies the removal of Justin-time VM access policies:
+
+```sh
+AzureActivity
+ | where ResourceProviderValue =~ "Microsoft.Security"
+ | where OperationNameValue =~
+“Microsoft.Security/locations/jitNetworkAccessPolicies/delete"
+```
+
+![Alt Text](/assets/img/MS44.JPG)
+
+On the **Set rule logic** tab of the **Analytics rule wizard - Create a new Scheduled rule** blade,
+in the **Query scheduling** section, set the **Run query** every to **5 Minutes**. Then I accepted the
+default values of the remaining settings and clicked **Next: Incident settings >**
+
+![Alt Text](/assets/img/MS45.JPG)
+
+On the **Incident settings** tab of the **Analytics rule wizard - Create a new Scheduled rule**
+blade, I accepted the default settings and clicked **Next: Automated response >.**
+
+![Alt Text](/assets/img/MS46.JPG)
+
+On the **Automated response** tab of the **Analytic rule wizard - Create a new Scheduled rule**
+blade, under **Automation rules**, I clicked **+ Add new**. In the **Create new automation rule** 
+window, I entered **Run Change-Severity Playbook** for the **Automation rule name**; under
+the **Trigger** field, I clicked the drop-down menu and selected **When alert is created**. In the
+**Create new automation rule** window, under **Actions**, I read the note and then clicked
+**Manage playbook permissions**.
+
+![Alt Text](/assets/img/MS47.JPG)
+
+On the **Manage permissions** window, I selected the checkbox next to the previously created
+**Resource group AZ500LAB1314151** and then clicked **Apply.**
+
+![Alt Text](/assets/img/MS48.JPG)
+
+In the **Create new automation rule** window, under **Actions**, I clicked the second drop-down
+menu and selected the **Change-Incident-Severity** logic app. On the **Create new automation rule** window, I clicked **Apply**.
+
+![Alt Text](/assets/img/MS49.JPG)
+
+On the **Automated response** tab of the **Analytic rule wizard - Create a new Scheduled rule**
+blade, I clicked **Next: Review and create >** and clicked **Save.**
+
+![Alt Text](/assets/img/MS50.JPG)
+
+On the **Automated response** tab of **the Analytic rule wizard - Create a new Scheduled rule**
+blade,I clicked **Next: Review and create >** and clicked **Save.** A new active rule called Playbook Demo was created. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.
+
+![Alt Text](/assets/img/MS51.JPG)
+
+### Task 6: Invoke an incident and review the associated actions.
+
+In the Azure portal, I navigated to **Microsoft Defender for Cloud|Overview** blade. My Secure Score had increased from 0% to 42%. 
+
+![Alt Text](/assets/img/MS52.JPG)
+
+On the **Microsoft Defender for Cloud|Overview blade**, I clicked **Workload protections**
+under **Cloud Security** in the left navigation. I scrolled down and clicked **Just-in-time VM access** tile under **Advanced protection.**
+
+![Alt Text](/assets/img/MS53.JPG)
+
+On the **Just-in-time VM access** blade, on the right-hand side of the row referencing the **myVM**
+virtual machine, I clicked the **ellipsis (…)** button, clicked **Remove**, and then clicked **Yes**
+
+![Alt Text](/assets/img/MS54.JPG)
+
+In the Azure portal, in the **Search resources, services, and docs** text box at the top of the
+Azure portal page, I typed **Activity log** and pressed the **Enter** key.
+
+![Alt Text](/assets/img/MS55.JPG)
+
+I navigated to the **Activity log** blade and noted and **Delete JIT Network Access Policies entry**
+after I searched for it.
+
+![Alt Text](/assets/img/MS56.JPG)
+
+In the Azure portal, I navigated back to the **Microsoft Sentinel|Overview** blade. I reviewed
+the dashboard and verified that it displayed an incident corresponding to the deletion of the
+Just-in-time VM access policy. The **Incidents** card indicated that a new incident was created at
+7 am. The incident was also marked as a high-severity incident. 
+
+![Alt Text](/assets/img/MS57.JPG)
+
+The incident alert occurred as a result of the Just-in-time access policy deletion activity which
+had been propagated to the Log Analytics workspace associated with my Microsoft Sentinel
+instance. 
+
+![Alt Text](/assets/img/MS58.JPG)
+
+I clicked on Manage Incidents to get more information about the incident, I clicked on
+Evidence to see what was gathered to prove the incident, and there was KQL code that
+indicated there was Azure activity provided by the resource Microsoft Security that a deletion
+operation of JIT network access policy took place. 
+
+![Alt Text](/assets/img/MS59.JPG)
+
+On the **Microsoft Sentinel|Overview** blade, in the **Threat Management** section, I clicked
+**Incidents** and verified that the blade displayed an incident with either medium or high
+severity level. The severity level can be changed.
+
+![Alt Text](/assets/img/MS60.JPG)
+
+To summarize I created a Microsoft Sentinel workspace, connected it to Azure Activity logs, created a playbook and custom alerts that are triggered in response to the removal of Just-intime VM access policies, and verified that the configuration is valid.
+
+**Clean up resources**
+In the PowerShell session within the Cloud Shell pane, I ran the following to remove the
+resource group that I created for this lab.
+
+```sh
+Remove-AzResourceGroup -Name "AZ500LAB131415" -Force -AsJob
+```
+
+## Acknowledgment
+
+I would like to acknowledge Microsoft Learning for providing the lab exercises and resources related to Azure security technologies. The following lab exercises are part of the Azure Security Technologies course:
+
+* Azure Monitor Lab: Lab 08 - Azure Monitor
+* Microsoft Defender for Cloud Lab: Lab 09 - Microsoft Defender for Cloud
+* Microsoft Sentinel Lab: Lab 10 - Microsoft Sentinel
+
+You can access the lab materials and detailed instructions by visiting the following links:
+
+* [Azure Monitor Lab]( https://microsoftlearning.github.io/AZ500-AzureSecurityTechnologies/Instructions/Labs/LAB_08_Azure%20Monitor.html)
+* [Microsoft Defender for Cloud Lab](https://microsoftlearning.github.io/AZ500-AzureSecurityTechnologies/Instructions/Labs/LAB_09_Microsoft%20Defender%20for%20Cloud.html)
+* [Microsoft Sentinel Lab](https://microsoftlearning.github.io/AZ500-AzureSecurityTechnologies/Instructions/Labs/LAB_10_Microsoft%20Sentinel.html)
+
+That concludes the Azure Monitor, Microsoft Defender for Cloud, and Microsoft Sentinel labs. On to the next! &#x1F60A;
