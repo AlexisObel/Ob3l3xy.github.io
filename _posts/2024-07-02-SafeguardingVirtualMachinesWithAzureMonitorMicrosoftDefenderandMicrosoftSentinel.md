@@ -618,7 +618,8 @@ On the **Logic Apps Designer** blade, I clicked **Save** to save my changes.
 
 ### Task 5: Create a custom alert and configure a playbook as an automated response
 
-In the Azure portal, I navigated back to the **Microsoft Sentinel|Overview blade**.
+In the Azure portal, I navigated back to the 
+**Microsoft Sentinel|Overview blade**.
 
 ![Alt Text](/assets/img/MS41.JPG)
 
@@ -641,8 +642,7 @@ in the **Rule query** text box, I pasted the following rule query that identifie
 ```sh
 AzureActivity
  | where ResourceProviderValue =~ "Microsoft.Security"
- | where OperationNameValue =~
-“Microsoft.Security/locations/jitNetworkAccessPolicies/delete"
+ | where OperationNameValue =~ “Microsoft.Security/locations/jitNetworkAccessPolicies/delete"
 ```
 
 ![Alt Text](/assets/img/MS44.JPG)
@@ -689,7 +689,8 @@ blade,I clicked **Next: Review and create >** and clicked **Save.** A new active
 
 ### Task 6: Invoke an incident and review the associated actions.
 
-In the Azure portal, I navigated to **Microsoft Defender for Cloud|Overview** blade. My Secure Score had increased from 0% to 42%. 
+In the Azure portal, I navigated to **Microsoft Defender for Cloud|Overview** blade. 
+My Secure Score had increased from 0% to 42%. 
 
 ![Alt Text](/assets/img/MS52.JPG)
 
