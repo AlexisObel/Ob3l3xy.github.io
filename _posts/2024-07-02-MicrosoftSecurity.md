@@ -1,5 +1,5 @@
 ---
-title: Microsoft Security 
+title: Safeguarding Virtual Machines with Azure Monitor, Microsoft Defender, and Microsoft Sentinel 
 date: 2024-07-02 14:34:00 +3
 categories: Microsoft 
 tags:
@@ -246,16 +246,21 @@ In the Azure portal, in the **Search resources, services, and docs** text box at
 
 ![Alt Text](/assets/img/DFC2.JPG)
 
-
-In the left navigation panel, I clicked **Getting started**. On the **Microsoft Defender for Cloud | Getting started** blade, I clicked **Upgrade.**
+In the left navigation panel, I clicked **Getting started** and 
+on the **Microsoft Defender for Cloud | Getting started** blade, I clicked **Upgrade**.
 
 ![Alt Text](/assets/img/DFC3.JPG)
 
-On the **Microsoft Defender for Cloud | Getting started** blade, in the **Install agents** tab, I scrolled down and clicked **Install agents**.
+On the **Microsoft Defender for Cloud | Getting started** blade,
+ in the **Install agents** tab, I scrolled down and clicked **Install agents**.
 
 ![Alt Text](/assets/img/DFC4.JPG)
 
-On the **Microsoft Defender for Cloud | Getting started** blade, on the **Upgrade** tab » I scrolled down until the **Select workspaces with enhanced security features** section was visible » I turned on the **Microsoft Defender** plan by selecting your Log Analytics Workspace, then clicked the large Blue Upgrade button.
+On the **Microsoft Defender for Cloud | Getting started** blade, 
+on the **Upgrade** tab » I scrolled down until 
+the **Select workspaces with enhanced security features** section was visible » I turned 
+on the **Microsoft Defender** plan by selecting your Log Analytics Workspace, 
+then clicked the large Blue Upgrade button.
 
 ![Alt Text](/assets/img/DFC5.JPG)
 
@@ -263,19 +268,23 @@ I navigated to **Microsoft Defender for Cloud** and, in the left navigation pane
 
 ![Alt Text](/assets/img/DFC6.JPG)
 
-On the **Settings | Defender plans** blade, I selected **Enable all plans** and simply viewed the plans without selecting any because the 30-day free trial was enough of what I needed. 
+On the **Settings | Defender plans** blade, 
+I selected **Enable all plans** and simply viewed the plans without selecting any because the 30-day free trial was enough of what I needed. 
 
 ![Alt Text](/assets/img/DFC7.JPG)
 
-I navigated back to the **Microsoft Defender for Cloud | Environment settings** blade, expanded until my subscription appeared, and clicked the entry representing the Log Analytics workspace I created in the previous lab.
+I navigated back to the **Microsoft Defender for Cloud | Environment settings** blade, 
+expanded until my subscription appeared, and clicked the entry representing the Log Analytics workspace I created in the previous lab.
 
 ![Alt Text](/assets/img/DFC8.JPG)
 
-On the **Settings | Defender plans** blade, I ensured that all options are **“On”**. I didn’t need to click **Enable all plans**. 
+On the **Settings | Defender plans** blade, 
+I ensured that all options are **“On”**. I didn’t need to click **Enable all plans**. 
 
 ![Alt Text](/assets/img/DFC9.JPG)
 
-I selected **Data collection** from the **Settings | Defender plans** blade and clicked **All Events** and **Save**.
+I selected **Data collection** from 
+the **Settings | Defender plans** blade and clicked **All Events** and **Save**.
 
 ![Alt Text](/assets/img/DFC10.JPG)
 
@@ -283,15 +292,18 @@ I selected **Data collection** from the **Settings | Defender plans** blade and 
 
 In this task, I will review the Microsoft Defender for Cloud recommendations.
 
-In the Azure portal, I navigated back to the **Microsoft Defender for Cloud | Overview** blade.
+In the Azure portal, I navigated back to 
+the **Microsoft Defender for Cloud | Overview** blade.
 
 ![Alt Text](/assets/img/DFC11.JPG)
 
-On the **Microsoft Defender for Cloud | Overview blade**, I reviewed the **Secure Score** tile. My security score was 0%. The score was extremely low which meant that the risk level was high.
+On the **Microsoft Defender for Cloud|Overview blade**, 
+I reviewed the **Secure Score** tile. My security score was 0%. The score was extremely low which meant that the risk level was high.
 
 ![Alt Text](/assets/img/DFC13.JPG)
 
-I navigated back to the **Microsoft Defender for Cloud | Overview** blade and clicked **Assessed resources**.
+I navigated back to the **Microsoft Defender for Cloud|Overview** blade 
+and clicked **Assessed resources**.
 
 ![Alt Text](/assets/img/DFC14.JPG)
 
@@ -321,11 +333,13 @@ access control
 
 In this task, I will implement the Microsoft Defender for Cloud recommendation to enable Just-in-time VM Access on the virtual machine.
 
-In the Azure portal, I navigated back to the **Microsoft Defender for Cloud | Overview** blade and clicked **Workload protections** under **Cloud Security** in the left navigation panel.
+In the Azure portal, I navigated back to the **Microsoft Defender for Cloud|Overview** 
+blade and clicked **Workload protections** under **Cloud Security** in the left navigation panel.
 
 ![Alt Text](/assets/img/DFC17.JPG)
 
-On the **Microsoft Defender for Cloud | Workload protections** blade, I scrolled down to the **Advanced protection** section and clicked the **Just-in-time VM access** tile.
+On the **Microsoft Defender for Cloud|Workload protections** blade, 
+I scrolled down to the **Advanced protection** section and clicked the **Just-in-time VM access** tile.
 
 ![Alt Text](/assets/img/DFC18.JPG)
 
