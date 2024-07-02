@@ -17,7 +17,7 @@ tags:
 ---
 
 <p style="text-align: justify;">
-The assignment consists of three labs: Azure Monitor, Microsoft Defender, and Microsoft
+The exercise consists of three labs: Azure Monitor, Microsoft Defender, and Microsoft
 Sentinel.
 </p>
 <p style="text-align: justify;">
@@ -246,7 +246,8 @@ In the Azure portal, in the **Search resources, services, and docs** text box at
 
 ![Alt Text](/assets/img/DFC2.JPG)
 
-In the left navigation panel, I clicked **Getting started**. On the **Microsoft Defender for Cloud | Getting started** blade, I clicked **Upgrade**.
+
+In the left navigation panel, I clicked **Getting started**. On the **Microsoft Defender for Cloud | Getting started** blade, I clicked **Upgrade.**
 
 ![Alt Text](/assets/img/DFC3.JPG)
 
