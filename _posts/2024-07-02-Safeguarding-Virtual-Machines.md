@@ -15,6 +15,8 @@ tags:
     Microsoft Sentinel,
   ]
 ---
+![Alt Text](/assets/img/MS.JPEG)
+
 
 <p style="text-align: justify;">
 The exercise consists of three labs: Azure Monitor, Microsoft Defender, and Microsoft
