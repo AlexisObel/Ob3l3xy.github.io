@@ -3,7 +3,7 @@ title: Safeguarding Virtual Machines with Azure Monitor, Microsoft Defender, and
 date: 2024-07-02 14:34:00 +3
 categories: Microsoft 
 image: 
-  path: /assets/img/MiS.JPG
+  path: (/assets/img/MiS.JPG)
 tags:
   [
     SOC,
