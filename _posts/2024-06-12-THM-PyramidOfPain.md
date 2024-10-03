@@ -16,7 +16,7 @@ image:
 When an adversary tries to attack networks, information systems, and other critical organization infrastructure, they want to do that without being detected or prevented successfully. The evidence left behind by the attacker, whether it’s in the form of what they used or what they did, is an indicator of compromise which can also be used to detect cyberattacks. Once they are detected, cybersecurity specialists like me will be alerted and we will put stronger security measures in place to prevent further attacks in case an intrusion occurs, this will be very painful to the attacker because it will be more difficult for them or completely lower their chances of succeeding in their attacks. In this Try Hack Me room, I will learn about the concept (pyramid of pain) that was introduced in 2013 by an Information Security expert called David J Bianco, where I will get to understand in detail the different indicators of compromise within the pyramid and the level of pain it inflicts on the attacker and why it does so to that extent.</p>
 
 
-![Alt Text](/assets/img/pyramid.png)
+![Alt Text](/assets/img/pyramid2.JPG)
 
 _Image from https://gblogs.cisco.com/ca/2020/08/26/the-canadian-bacon-cisco-security-and-the-pyramid-of-pain/_
 
