@@ -15,7 +15,7 @@ tags:
     Microsoft Sentinel,
   ]
 image: 
-  path: /assets/img/MiS.jpg
+  path: /assets/img/MiS.JPG
 ---
 
 
