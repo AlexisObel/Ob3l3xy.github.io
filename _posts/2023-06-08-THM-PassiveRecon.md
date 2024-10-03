@@ -4,7 +4,7 @@ date: 2023-06-08 02:49:00 +3
 categories: THM
 tags: [Reconnaissance] # TAG names should always be lowercase
 image: 
-  path: /assets/img/PASSIVE.JPG
+  path: /assets/img/PASSIVE.jpg
 ---
 <p style="text-align: justify;">
 Passive reconnaissance is all about gathering information about a target without directly interacting with the system and the people. In this room we will learn about the various tools and techniques that will be used to carry out passive reconnaissance as well as test our knowledge about it as we go along. Another reason why it is important to learn about it is because it is the first step in the cyber kill chain before hackers finally decide what weapons they will create and send to their target. It would be interesting to know how they do it without getting noticed.</p>

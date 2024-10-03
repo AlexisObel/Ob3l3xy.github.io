@@ -4,7 +4,7 @@ date: 2023-06-03 01:59:00 +3
 categories: THM
 tags: [Web Apps, Web App Security, Web fundamentals, Digital Forensics, SOC, Offensive Security, Defensive Security]
 image: 
-  path: /assets/img/cyber.JPG
+  path: /assets/img/cyber.jpg
 ---
 <p style="text-align: justify;">
 The learning path offered by Try Hack Me gives a proper introduction to cyber security by explaining the fundamentals which include an introduction to other fundamental topics such as offensive security, and defensive security. Knowledge about this will lay a strong foundation for tackling more advanced topics in cybersecurity as well as provide insights on some careers in the field.</p>

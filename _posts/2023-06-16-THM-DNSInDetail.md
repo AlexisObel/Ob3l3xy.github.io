@@ -4,7 +4,7 @@ date: 2023-06-16 12:31:00 +3
 categories: THM
 tags: [Networking, DNS]
 image: 
-  path: /assets/img/DNSid.JPG
+  path: /assets/img/DNSid.jpg
 ---
 
 ## What is DNS?

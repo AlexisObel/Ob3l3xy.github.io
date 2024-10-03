@@ -4,7 +4,7 @@ date: 2023-05-28 07:27:00 +3
 categories: HTB
 tags: [Web Apps, Web App Security, Web fundamentals] 
 image: 
-  path: /assets/img/Web-intro.JPG
+  path: /assets/img/Web-intro.jpg
 ---
 <p style="text-align: justify;">
 In order to be able to secure web applications, an understanding of how web applications work, their architecture and vulnerabilites is important to be able to secure them effectively. In this post, I will demonstrate how I went about the labs in this module of HTB Academy.</p>
