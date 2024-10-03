@@ -2,7 +2,8 @@
 title: HTB Linux Fundamentals
 date: 2023-05-30 07:27:00 +3
 categories: HTB
-image: /assets/img/linux-fun.JPG
+image: 
+  path: /assets/img/linux-fun.JPG
 tags: [Linux fundamentals, Cybersecurity, Linux security]
 ---
 <p style="text-align: justify;">

@@ -2,7 +2,8 @@
 title: THM Introduction To Cybersecurity
 date: 2023-06-03 01:59:00 +3
 categories: THM
-image: /assets/img/cyber.JPG
+image: 
+  path: /assets/img/cyber.JPG
 tags: [Web Apps, Web App Security, Web fundamentals, Digital Forensics, SOC, Offensive Security, Defensive Security]
 ---
 <p style="text-align: justify;">

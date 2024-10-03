@@ -2,7 +2,8 @@
 title: THM Pyramid Of Pain
 date: 2024-06-12 23:55:00 +3
 categories: THM
-image: /assets/img/pyramid.JPG
+image: 
+  path: /assets/img/pyramid.JPG
 tags:
   [
     SOC,
