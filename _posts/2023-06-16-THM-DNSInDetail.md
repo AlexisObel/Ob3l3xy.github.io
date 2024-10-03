@@ -2,9 +2,9 @@
 title: THM DNS In Detail
 date: 2023-06-16 12:31:00 +3
 categories: THM
-image: 
-  path: (/assets/img/DNSid.JPG)
 tags: [Networking, DNS]
+image: 
+  path: /assets/img/DNSid.JPG
 ---
 
 ## What is DNS?
