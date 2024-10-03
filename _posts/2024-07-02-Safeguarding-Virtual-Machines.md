@@ -15,7 +15,7 @@ tags:
     Microsoft Sentinel,
   ]
 ---
-![Alt Text](/assets/img/MS.JPEG)
+![Alt Text](/assets/img/MiS.JPG)
 
 
 <p style="text-align: justify;">
