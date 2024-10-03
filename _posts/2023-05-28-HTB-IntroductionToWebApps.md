@@ -2,6 +2,7 @@
 title: HTB Introduction To Web Applications
 date: 2023-05-28 07:27:00 +3
 categories: HTB
+image: /assets/img/Web-intro.JPG
 tags: [Web Apps, Web App Security, Web fundamentals] 
 ---
 <p style="text-align: justify;">

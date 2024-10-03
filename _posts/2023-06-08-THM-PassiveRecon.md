@@ -2,6 +2,7 @@
 title: THM Passive Reconnaissance
 date: 2023-06-08 02:49:00 +3
 categories: THM
+image: /assets/img/PASSIVE.JPG
 tags: [Reconnaissance] # TAG names should always be lowercase
 ---
 <p style="text-align: justify;">

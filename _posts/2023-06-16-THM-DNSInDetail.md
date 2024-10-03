@@ -2,6 +2,7 @@
 title: THM DNS In Detail
 date: 2023-06-16 12:31:00 +3
 categories: THM
+image: /assets/img/DNSid.JPG
 tags: [Networking, DNS]
 ---
 

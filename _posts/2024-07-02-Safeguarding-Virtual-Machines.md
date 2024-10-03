@@ -17,7 +17,7 @@ tags:
   ]
 ---
 
-![Alt Text](/assets/img/MiS.JPG)
+
 
 <p style="text-align: justify;">
 The exercise consists of three labs: Azure Monitor, Microsoft Defender, and Microsoft
