@@ -2,6 +2,7 @@
 title: Safeguarding Virtual Machines with Azure Monitor, Microsoft Defender, and Microsoft Sentinel 
 date: 2024-07-02 14:34:00 +3
 categories: Microsoft 
+image: /assets/img/MiS.JPG
 tags:
   [
     SOC,
@@ -15,8 +16,8 @@ tags:
     Microsoft Sentinel,
   ]
 ---
-![Alt Text](/assets/img/MiS.JPG)
 
+![Alt Text](/assets/img/MiS.JPG)
 
 <p style="text-align: justify;">
 The exercise consists of three labs: Azure Monitor, Microsoft Defender, and Microsoft
