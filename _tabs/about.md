@@ -8,7 +8,7 @@ order: 4
 
 > Welcome to my cybersecurity blog!
 >
->💼 **Proffesional Profile**
+>💼 **Professional Profile**
 >
 >I am a passionate cybersecurity enthusiast with a keen interest in Security Operations, Ethical Hacking, and Threat Intelligence.  I also have experience in IT support, covering system user support, data management, and Network troubleshooting. 
 >
