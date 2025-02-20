@@ -18,7 +18,7 @@ order: 4
 > - ***Concentrations***: Forensic Information Technology & Cybercrime, Networking
 > - Graduated in October 2023
 >
->🎓 **Certifications & Skills:** 
+>🛠️ **Certifications** 
 >
 >I hold industry-recognized certifications, with the most recent ones being:
 >  
