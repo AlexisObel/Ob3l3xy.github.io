@@ -31,7 +31,7 @@ order: 4
 > 🏆 **Honors and Awards**
 >
 > **1. Best in ADC - Microsoft Security Operations Analyst award** issued by **Cyber Shujaa**
-> - Acknowledged for my dedication, active participation, high performance, and consistent effort throughout the program.
+> - Acknowledged for my dedication, active participation, good performance, and consistent effort throughout the program.
 >
 > 🔍 **What You’ll Find Here**
 >
