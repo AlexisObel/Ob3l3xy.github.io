@@ -10,7 +10,7 @@ order: 4
 >
 >💼 **Professional Profile**
 >
->I am a passionate cybersecurity enthusiast with a keen interest in Security Operations, Ethical Hacking, and Threat Intelligence.  I also have experience in IT support, covering system user support, data management, and Network troubleshooting. 
+>I am a cybersecurity enthusiast with a keen interest in Security Operations Analysis, Ethical Hacking, and Threat Intelligence, while continuously exploring other areas in the field.  I also have experience in IT support, covering system user support, data management, and Network troubleshooting. 
 >
 >🎓 **Education**
 >
