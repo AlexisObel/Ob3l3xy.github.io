@@ -6,7 +6,6 @@ order: 4
 
 ![Alt Text](/assets/img/CyberShujaa.JPG)
 
-> Welcome to my cybersecurity blog!
 >
 >💼 **Professional Profile**
 >
